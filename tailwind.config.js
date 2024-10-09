@@ -26,24 +26,17 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-      'main':'#8F993C',
-      'white':'#FFFFFF',
-      'black':'#000000',
-      'lightGray':'#D1D3D4',
-      'dark':'#262627',
-      'dark2':'#48494A',
-      'dark3':'#636466'
+      'bgGray':'#D1D1D1',
+      'blackTxt':'#1C1C1C',
+      'Woodsmoke400':'#888888',
+      'punch600':'#E33026',
+      
         
     },
     fontFamily: {
-      'Ravi300': ['Ravi300', 'Ravi300'],
-      'Ravi400': ['Ravi400', 'Ravi400'],
-      'Ravi500': ['Ravi500', 'Ravi500'],
-      'Ravi700': ['Ravi700', 'Ravi700'],
-      'Ravi800': ['Ravi800', 'Ravi800'],
-      'EncodeSans600': ['EncodeSans600', 'EncodeSans600'],
-      'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
-      'EncodeSans500': ['EncodeSans500', 'EncodeSans500'],
+      'YekanBakh700': ['YekanBakh700', 'YekanBakh700'],
+      'YekanBakh400': ['YekanBakh400', 'YekanBakh400'],
+    
 
     },
     extend: {
