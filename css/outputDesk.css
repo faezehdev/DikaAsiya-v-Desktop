@@ -784,6 +784,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -887,6 +891,10 @@ video {
   height: 36px;
 }
 
+.h-\[66vh\] {
+  height: 66vh;
+}
+
 .h-\[calc\(100vh-106px\)\] {
   height: calc(100vh - 106px);
 }
@@ -897,6 +905,10 @@ video {
 
 .h-svh {
   height: 100svh;
+}
+
+.min-h-svh {
+  min-height: 100svh;
 }
 
 .w-90p {
@@ -1953,14 +1965,14 @@ video {
   border-bottom-color: rgb(136 136 136 / var(--tw-border-opacity));
 }
 
-.border-b-Woodsmoke600 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(93 93 93 / var(--tw-border-opacity));
-}
-
 .border-b-Woodsmoke50 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(246 246 246 / var(--tw-border-opacity));
+}
+
+.border-b-Woodsmoke600 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(93 93 93 / var(--tw-border-opacity));
 }
 
 .\!bg-white {
@@ -2137,6 +2149,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -2144,6 +2161,10 @@ video {
 
 .pb-14 {
   padding-bottom: 3.5rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .pb-3 {
@@ -2174,8 +2195,8 @@ video {
   padding-top: 2rem;
 }
 
-.pb-16 {
-  padding-bottom: 4rem;
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-left {
@@ -2823,6 +2844,11 @@ a {
 
 .commentP input , .commentP textarea{
   background-color: transparent;
+}
+
+.scrollbar-track-y{
+  left: 0;
+  right: unset;
 }
 
 @media (min-width: 480px) {

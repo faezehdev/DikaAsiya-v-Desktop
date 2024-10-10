@@ -71,3 +71,8 @@ color: #5D5D5D;
 .commentP input , .commentP textarea{
 background-color: transparent;
 }
+
+.scrollbar-track-y{
+left: 0;
+right: unset;
+}
