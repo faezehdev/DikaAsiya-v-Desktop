@@ -1999,10 +1999,6 @@ video {
   background-color: rgb(93 93 93 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#00000061\] {
-  background-color: #00000061;
-}
-
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2882,12 +2878,12 @@ video {
   font-family: "IRANSansWeb300";
 }
 
-header .Toggles-Items.openMenu .Toggle:nth-child(1){
+header .toggle-inner.openMenu .Toggle:nth-child(1){
   transform-origin: 12px 6px;
   transform: rotate(-51deg);
 }
 
-header .Toggles-Items.openMenu .Toggle:nth-child(2){
+header .toggle-inner.openMenu .Toggle:nth-child(2){
   transform:translateX(100%);
   -webkit-transform:translateX(100%);
   -moz-transform:translateX(100%);
@@ -2896,7 +2892,7 @@ header .Toggles-Items.openMenu .Toggle:nth-child(2){
   opacity: 0;
 }
 
-header .Toggles-Items.openMenu .Toggle:nth-child(3){
+header .toggle-inner.openMenu .Toggle:nth-child(3){
   transform-origin: 16px -6px;
   transform: rotate(51deg);
   -webkit-transform: rotate(51deg);
