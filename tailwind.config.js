@@ -30,8 +30,10 @@ module.exports = {
       'blackTxt':'#1C1C1C',
       'Woodsmoke400':'#888888',
       'punch600':'#E33026',
-      
-        
+      'Woodsmoke/50':'#F6F6F6',
+      'Woodsmoke800':'#454545',
+      'Woodsmoke600':'#5D5D5D'
+
     },
     fontFamily: {
       'YekanBakh700': ['YekanBakh700', 'YekanBakh700'],
@@ -73,6 +75,9 @@ module.exports = {
          '24.18':'24.18px',
          '27.09':'27.09px',
          '20.15':'20.15px',
+         '35':'35px',
+         '28':'28px',
+         '41':'41px',
        
 
       },
@@ -80,6 +85,8 @@ module.exports = {
       width:{
         '85p':'85%',
         '90p':'90%',
+        '95p':'95%',
+
       },
       maxWidth: {
         'x100': '100%',
