@@ -29,7 +29,11 @@ module.exports = {
       'bgGray':'#D1D1D1',
       'blackTxt':'#1C1C1C',
       'Woodsmoke400':'#888888',
+      'Woodsmoke600':'#5D5D5D',
+      'Woodsmoke50':'#F6F6F6',
       'punch600':'#E33026',
+      'white':'#ffffff',
+      'black':'#000000',
       
         
     },
