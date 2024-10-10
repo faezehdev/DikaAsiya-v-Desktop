@@ -30,6 +30,7 @@ module.exports = {
       'blackTxt':'#1C1C1C',
       'Woodsmoke400':'#888888',
       'Woodsmoke600':'#5D5D5D',
+      'Woodsmoke800':'#454545',
       'Woodsmoke50':'#F6F6F6',
       'punch600':'#E33026',
       'white':'#ffffff',
