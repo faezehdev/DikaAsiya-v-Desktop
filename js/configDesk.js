@@ -80,16 +80,23 @@ var lastScrollTop = 0;
 window.addEventListener("scroll", function(){ 
    var st = window.pageYOffset || document.documentElement.scrollTop; 
    if (st > lastScrollTop) {
-    console.log("over");
+    // console.log("over");
 
     $("header").addClass("goDown");
     $("header").removeClass("goTop");
+    // if(document.querySelector('main.ProductList-C')){
+    //   document.querySelector('.Right-Fixed').classList.remove('goDown')
+    // }
     
 } else if (st < lastScrollTop) {
     // upscroll code
     $("header").addClass("goTop");
     $("header").removeClass("goDown");
-        console.log("less");
+        // console.log("less");
+        // if(document.querySelector('main.ProductList-C')){
+        //   document.querySelector('.Right-Fixed').classList.add('goDown')
+        // }
+   
    } 
    lastScrollTop = st <= 0 ? 0 : st;
 }, false);
@@ -162,3 +169,12 @@ function switchScroll() {
   function enable_scroll_mobile(){
     document.removeEventListener('touchmove', preventDefault, false);
   }
+  const lenis = new Lenis()
+
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  
+  requestAnimationFrame(raf)

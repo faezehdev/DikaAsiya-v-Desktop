@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>productCat</title>
-    <meta name="description" content="productCat">
+    <title>productList</title>
+    <meta name="description" content="productList">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/outputDesk.css">
+    <link rel="stylesheet" href="css/simplebar.css">
 </head>
 <body class=" bg-bgGray">
-    <main class="ProductCat-C" dir="rtl">
+    <main class="ProductList-C overflow-hidden" dir="rtl">
         <header class="DesktopHeader fixed top-0 [&.goDown]:top-[-100%]
         ease-in [&.goTop]:top-0
          left-0 right-0 w-full z-[99] [&.activeHeader]:bg-bgGray hover:bg-bgGray duration-150
@@ -427,94 +428,469 @@
             
             </div>
         </div>
-        <section class="Section-1 w-full flex mt-[10em]">
+        <section class="Section-1 w-full flex mt-[10em] mb-[5em]">
             <div class="Products-C w-90p mx-auto flex flex-col gap-4">
-                <div class="Title w-full flex justify-start border-b-[1px] border-Woodsmoke400 py-[.8em]">
-                    <h1 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke400">
                         دسته‌بندی 
-                        <span class="color font-YekanBakh700 font-bold text-2xl leading-41 text-punch600">
                             محصولات
-                        </span>
+                       
                     </h1>
+                    <span class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        >
+                    </span>
+                    <span class="Current w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        پارتیشن‌ها
+                    </span>
                 </div>
-                <div class="ProductCats w-full flex justify-center items-center mt-[1.5em] mb-[5em]">
-                    <a href="" class="ProCat group/proCat overflow-hidden w-full before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
-                    before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
-                     w-full relative flex justify-center items-center">
-                      <div class="IMG flex w-full h-full overflow-hidden">
-                        <img src="images/HAM_3336-NEF_DxO_DeepPRIME 1.png" alt="" class="w-full 
-                        group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
-                      </div>
-                      <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
-                        <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
-                            <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
-                                پارتیشن‌ها
-                            </h2>
+                <div class="Products-Container w-full grid grid-cols-[1fr,4fr]">
+                    <div class="Right-Fixed relative flex gap-3 group/fixedMenu "id="scrollContainer" >
+                        <div class="Inner w-full flex innerSlide h-[90vh] overflow-hidden" >
+                            <ul class="menu__list overflow-y-auto relative w-full pr-[15%]
+                             flex flex-col gap-3 group-[&.goDown]/fixedMenu:translate-y-[10vh]
+                           duration-500 ">
+                           <span class="absolute right-0 top-0 menu__active mt-[.4em] fixed-Icon
+                           group-[&.goDown]/fixedMenu:translate-y-[10vh]
+                          duration-500">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M4.76869 5.99988L0.849695 9.8926C0.304287 10.4602 -3.42985e-08 11.2155 0 12.0001C3.42985e-08 12.7848 0.304287 13.5388 0.849695 14.1064L4.7687 18.0001L6.18269 16.5956L2.55069 13.0001L24 13.0001L23.9997 11.0001L2.55069 11.0001L6.18269 7.4044L4.76869 5.99988Z" fill="#1C1C1C"/>
+                                   </svg>
+                                   
+                           </span>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                  
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                 
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                  
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                 
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                  
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                 
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                  
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                 
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                  
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                 
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                  
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                    font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       تکجداره فریملس
+                               </a>
+                                
+                                </li>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                        تکجداره فریملس
+                                </a>
+                                 
+                                </li>
+                            </ul>
                         </div>
-                      </div>
-                    </a>
-                    <a href="" class="ProCat w-full group/proCat overflow-hidden before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
-                    before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
-                     w-full relative flex justify-center items-center">
-                      <div class="IMG flex w-full h-full">
-                        <img src="images/p2.png" alt="" class="w-full 
-                        group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
-                      </div>
-                      <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
-                        <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
-                            <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
-                                پارتیشن‌ها
+                  
+                    </div>
+                    <div class="Left-Products w-full flex flex-col">
+                        <a href="" class="Product h-screen relative w-full flex justify-center items-center">
+                           <div class="IMG w-full h-full flex justify-center items-center">
+                            <img src="images/IMG_2955 1.png" alt="" class="w-full object-cover h-full">
+                           </div>
+                           <div class="OV absolute flex justify-end items-center
+                            left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                            <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                تکجداره فریملس
                             </h2>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="" class="ProCat w-full group/proCat overflow-hidden before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
-                    before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
-                     w-full relative flex justify-center items-center">
-                      <div class="IMG flex w-full h-full">
-                        <img src="images/IMG_2518 1.png" alt="" class="w-full 
-                        group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
-                      </div>
-                      <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
-                        <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
-                            <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
-                                پارتیشن‌ها
-                            </h2>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="" class="ProCat w-full group/proCat overflow-hidden before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
-                    before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
-                     w-full relative flex justify-center items-center">
-                      <div class="IMG flex w-full h-full">
-                        <img src="images/b3.png" alt="" class="w-full 
-                        group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
-                      </div>
-                      <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
-                        <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
-                            <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
-                                پارتیشن‌ها
-                            </h2>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="" class="ProCat w-full group/proCat overflow-hidden before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
-                    before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
-                     w-full relative flex justify-center items-center">
-                      <div class="IMG flex w-full h-full">
-                        <img src="images/2  1.png" alt="" class="w-full 
-                        group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
-                      </div>
-                      <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
-                        <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
-                            <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
-                                پارتیشن‌ها
-                            </h2>
-                        </div>
-                      </div>
-                    </a>
-                    
+                           </div>
+                        </a>
+                        <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1 (1).png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1 (2).png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/compound-frame.png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product h-screen relative w-full flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1.png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (1).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (2).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/compound-frame.png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product h-screen relative w-full flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1.png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (1).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (2).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/compound-frame.png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product h-screen relative w-full flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1.png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (1).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (2).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/compound-frame.png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product h-screen relative w-full flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1.png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (1).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (2).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/compound-frame.png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product h-screen relative w-full flex justify-center items-center">
+                            <div class="IMG w-full h-full flex justify-center items-center">
+                             <img src="images/IMG_2955 1.png" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="OV absolute flex justify-end items-center
+                             left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                             <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                 تکجداره فریملس
+                             </h2>
+                            </div>
+                         </a>
+                         <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (1).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/IMG_2955 1 (2).png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                          <a href="" class="Product relative w-full h-screen flex justify-center items-center">
+                             <div class="IMG w-full h-full flex justify-center items-center">
+                              <img src="images/compound-frame.png" alt="" class="w-full object-cover h-full">
+                             </div>
+                             <div class="OV absolute flex justify-end items-center
+                              left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                              <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                  تکجداره فریملس
+                              </h2>
+                             </div>
+                          </a>
+                    </div>
                 </div>
+        
             </div>
         </section>
         <footer class="FooterDesk w-full flex flex-col bg-bgGray border-t-[1px] border-Woodsmoke400" dir="rtl">
@@ -660,13 +1036,15 @@
                  </span>
                 </a>
              </div>
-        </footer>
+           </footer>
     </main>
     <script src="js/gsap.js"></script>
     <script src="js/scrollTrigger.js"></script>
     <script src="js/swiper.js"></script>
+    <script src="js/lenisScroll.js"></script>
     <script src="js/jQuery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="js/configDesk.js"></script>
-    <script src="js/productCat.js"></script>
+    <script src="js/productList.js"></script>
 </body>
 </html>
