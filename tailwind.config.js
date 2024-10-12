@@ -32,7 +32,8 @@ module.exports = {
       'punch600':'#E33026',
       'Woodsmoke/50':'#F6F6F6',
       'Woodsmoke800':'#454545',
-      'Woodsmoke600':'#5D5D5D'
+      'Woodsmoke600':'#5D5D5D',
+      'White':'#fff'
 
     },
     fontFamily: {
@@ -78,6 +79,9 @@ module.exports = {
          '35':'35px',
          '28':'28px',
          '41':'41px',
+         '55':'55px',
+         '48':'48px',
+         '32':'32px',
        
 
       },
@@ -86,6 +90,7 @@ module.exports = {
         '85p':'85%',
         '90p':'90%',
         '95p':'95%',
+        '80p':'80%',
 
       },
       maxWidth: {
