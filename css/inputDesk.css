@@ -107,3 +107,16 @@ animation: scrollD 2s infinite;
 .activeSection img{
   filter: brightness(1)!important;
 }
+
+
+.projectList .projectBox:nth-child(6) ~ .projectBox {
+  display: none;
+}
+
+.loaded {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: none;
+}
