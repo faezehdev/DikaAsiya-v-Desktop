@@ -1,3 +1,13 @@
+
+$(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 50) {
+            $("header").addClass("activeHeader");
+        } else {
+           $("header").removeClass("activeHeader");
+        }
+    });
+});
 gsap.to(".Loading-Container svg", {
     opacity: 0,
     delay: 2,

@@ -75,15 +75,6 @@ toggle.addEventListener('click',()=>{
 })
 
 
-$(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 50) {
-            $("header").addClass("activeHeader");
-        } else {
-           $("header").removeClass("activeHeader");
-        }
-    });
-});
 
 var lastScrollTop = 0;
 window.addEventListener("scroll", function(){ 

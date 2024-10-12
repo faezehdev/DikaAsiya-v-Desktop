@@ -709,16 +709,16 @@ video {
   z-index: 98;
 }
 
+.z-\[999999\] {
+  z-index: 999999;
+}
+
 .z-\[9999\] {
   z-index: 9999;
 }
 
 .z-\[99\] {
   z-index: 99;
-}
-
-.z-\[999999\] {
-  z-index: 999999;
 }
 
 .float-start {
@@ -775,8 +775,21 @@ video {
   margin-bottom: auto;
 }
 
+.my-\[1\.5em\] {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.mb-\[1\.5em\] {
+  margin-bottom: 1.5em;
+}
+
 .ml-\[15\%\] {
   margin-left: 15%;
+}
+
+.mr-\[\.8em\] {
+  margin-right: .8em;
 }
 
 .mr-\[4\%\] {
@@ -789,6 +802,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-\[10em\] {
+  margin-top: 10em;
 }
 
 .mt-\[1em\] {
@@ -805,6 +822,22 @@ video {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mb-\[\.8em\] {
+  margin-bottom: .8em;
+}
+
+.mt-\[1\.5em\] {
+  margin-top: 1.5em;
+}
+
+.mb-\[3\.5em\] {
+  margin-bottom: 3.5em;
+}
+
+.mb-\[5em\] {
+  margin-bottom: 5em;
 }
 
 .box-border {
@@ -2102,6 +2135,16 @@ video {
   border-right-color: rgb(136 136 136 / var(--tw-border-opacity));
 }
 
+.bg-White {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-Woodsmoke\/50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
+}
+
 .bg-Woodsmoke600 {
   --tw-bg-opacity: 1;
   background-color: rgb(93 93 93 / var(--tw-bg-opacity));
@@ -2129,16 +2172,6 @@ video {
 .bg-punch600 {
   --tw-bg-opacity: 1;
   background-color: rgb(227 48 38 / var(--tw-bg-opacity));
-}
-
-.bg-White {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-Woodsmoke\/50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
@@ -2302,6 +2335,11 @@ video {
 .py-\[5em\] {
   padding-top: 5em;
   padding-bottom: 5em;
+}
+
+.py-\[\.8em\] {
+  padding-top: .8em;
+  padding-bottom: .8em;
 }
 
 .pt-\[2em\] {
@@ -2894,12 +2932,12 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
 .ease-linear {
   transition-timing-function: linear;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .contain-none {
@@ -3222,6 +3260,42 @@ main.Home .ProjectsGrid .Text p{
   -webkit-box-orient: vertical;
 }
 
+.ProductCat-C .ProductCats .Row{
+  display: grid;
+  width: 100%;
+  gap: 1.5em;
+  grid-template-rows: 579px;
+  grid-template-columns: 1fr 2fr;
+}
+
+.ProductCat-C .ProductCats .Row .innerRow{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  height: 579px;
+  grid-template-rows: repeat(2,48.5%);
+}
+
+/* .ProductCat-C .ProductCats .Row:nth-child(even) {
+  grid-template-columns: .8fr .8fr .8fr 1fr ;
+} */
+
+.ProductCat-C .ProductCats .Row:nth-child(even) .innerRow{
+  order: 2;
+}
+
+.ProductCat-C .ProductCats .Row:nth-child(even) .Blog:nth-child(1){
+  order: 1;
+}
+
+.ProductCat-C .ProductCats .Row:nth-child(even) .Blog:nth-child(2){
+  order: 3;
+}
+
+.ProductCat-C .ProductCats .Row:nth-child(even) .Blog:nth-child(3){
+  order: 4;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -3383,6 +3457,18 @@ main.Home .ProjectsGrid .Text p{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group\/proCat:hover .group-hover\/proCat\:scale-\[1\.1\] {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/proCat:hover .group-hover\/proCat\:scale-\[1\.2\] {
+  --tw-scale-x: 1.2;
+  --tw-scale-y: 1.2;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group\/header:hover .group-hover\/header\:border-l-\[1px\] {
   border-left-width: 1px;
 }
@@ -3463,10 +3549,6 @@ main.Home .ProjectsGrid .Text p{
 .\[\&\.active\]\:before\:w-full.active::before {
   content: var(--tw-content);
   width: 100%;
-}
-
-.\[\&\.goDown\]\:top-\[100\%\].goDown {
-  top: 100%;
 }
 
 .\[\&\.goDown\]\:top-\[-100\%\].goDown {

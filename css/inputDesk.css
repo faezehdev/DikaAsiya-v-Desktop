@@ -215,3 +215,32 @@ main.Home .ProjectsGrid .Text p{
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+.ProductCat-C .ProductCats .Row{
+  display: grid;
+  width: 100%;
+  gap: 1.5em;
+  grid-template-rows: 579px;
+  grid-template-columns: 1fr 2fr;
+}
+.ProductCat-C .ProductCats .Row .innerRow{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  height: 579px;
+  grid-template-rows: repeat(2,48.5%);
+}
+/* .ProductCat-C .ProductCats .Row:nth-child(even) {
+  grid-template-columns: .8fr .8fr .8fr 1fr ;
+} */
+.ProductCat-C .ProductCats .Row:nth-child(even) .innerRow{
+order: 2;
+}
+.ProductCat-C .ProductCats .Row:nth-child(even) .Blog:nth-child(1){
+  order: 1;
+}
+.ProductCat-C .ProductCats .Row:nth-child(even) .Blog:nth-child(2){
+  order: 3;
+}
+.ProductCat-C .ProductCats .Row:nth-child(even) .Blog:nth-child(3){
+  order: 4;
+}
