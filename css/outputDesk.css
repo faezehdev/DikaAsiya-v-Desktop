@@ -665,6 +665,10 @@ video {
   bottom: 4rem;
 }
 
+.bottom-32 {
+  bottom: 8rem;
+}
+
 .bottom-8 {
   bottom: 2rem;
 }
@@ -675,6 +679,14 @@ video {
 
 .left-0 {
   left: 0px;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.left-40 {
+  left: 10rem;
 }
 
 .left-\[2\.5\%\] {
@@ -860,6 +872,10 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -967,6 +983,10 @@ video {
   height: 6rem;
 }
 
+.h-\[114px\] {
+  height: 114px;
+}
+
 .h-\[25px\] {
   height: 25px;
 }
@@ -1004,6 +1024,11 @@ video {
   min-height: 100svh;
 }
 
+.\!w-fit {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
 .w-90p {
   width: 95%;
 }
@@ -1026,6 +1051,14 @@ video {
 
 .w-\[31\%\] {
   width: 31%;
+}
+
+.w-\[320px\] {
+  width: 320px;
+}
+
+.w-\[65\%\] {
+  width: 65%;
 }
 
 .w-\[66\%\] {
@@ -1103,6 +1136,28 @@ video {
 
 .-translate-y-\[150\%\] {
   --tw-translate-y: -150%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[50\%\] {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[300\%\] {
+  --tw-translate-y: 300%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2102,6 +2157,11 @@ video {
   border-color: rgb(93 93 93 / var(--tw-border-opacity));
 }
 
+.border-blackTxt {
+  --tw-border-opacity: 1;
+  border-color: rgb(28 28 28 / var(--tw-border-opacity));
+}
+
 .border-b-Woodsmoke400 {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(136 136 136 / var(--tw-border-opacity));
@@ -2150,6 +2210,15 @@ video {
 .bg-bgGray {
   --tw-bg-opacity: 1;
   background-color: rgb(209 209 209 / var(--tw-bg-opacity));
+}
+
+.bg-blackTxt {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 28 28 / var(--tw-bg-opacity));
+}
+
+.bg-blackTxt\/\[0\.5\] {
+  background-color: rgb(28 28 28 / 0.5);
 }
 
 .bg-white {
@@ -2299,6 +2368,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2312,6 +2386,11 @@ video {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.px-\[2\.5\%\] {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .py-1 {
@@ -2337,6 +2416,11 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-8 {
@@ -3149,6 +3233,35 @@ a {
   display: none;
 }
 
+.galleryPagination .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: #888888;
+  transition: 0.5s;
+}
+
+.galleryPagination .swiper-pagination-bullet-active{
+  width: 12px;
+  height: 12px;
+  background-color: #E33026;
+}
+
+.gallerySlider .imgS:hover img{
+  transform: scale(1.1);
+}
+
+.project .relProject .swiper-slide-active img{
+  transform: scale(1.1);
+}
+
+/* .project .relProject .swiper-slide .overTitle .inner{
+transform: scale(0.65);
+}
+.project .relProject .swiper-slide-active .overTitle .inner{
+transform: scale(1);
+} */
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -3265,6 +3378,11 @@ a {
 .after\:bg-\[\#1C1C1C80\]::after {
   content: var(--tw-content);
   background-color: #1C1C1C80;
+}
+
+.after\:bg-gradient-to-r::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .after\:bg-gradient-to-t::after {
