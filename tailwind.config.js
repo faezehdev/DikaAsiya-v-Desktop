@@ -38,7 +38,7 @@ module.exports = {
       'Woodsmoke/50':'#F6F6F6',
       'Woodsmoke800':'#454545',
       'Woodsmoke600':'#5D5D5D',
-      'White':'#fff'
+      'White':'#fff',
 
       'white':'#ffffff',
       'black':'#000000',
