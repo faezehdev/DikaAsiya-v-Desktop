@@ -61,3 +61,17 @@ tabBtns.forEach(btn=>{
     }
     })
 })
+// related product
+let SwiperProduct= new Swiper ('.swiper-RelatedProduct', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    effect:'slide' ,
+   speed:2000
+    })
+// related project
+let SwiperProject= new Swiper ('.swiper-RelatedProject', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    effect:'slide' ,
+   speed:2000
+    })  
