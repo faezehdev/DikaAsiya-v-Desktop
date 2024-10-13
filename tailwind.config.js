@@ -35,6 +35,11 @@ module.exports = {
       'Woodsmoke800':'#454545',
       'Woodsmoke50':'#F6F6F6',
       'punch600':'#E33026',
+      'Woodsmoke/50':'#F6F6F6',
+      'Woodsmoke800':'#454545',
+      'Woodsmoke600':'#5D5D5D',
+      'White':'#fff'
+
       'white':'#ffffff',
       'black':'#000000',
       
@@ -80,12 +85,22 @@ module.exports = {
          '24.18':'24.18px',
          '27.09':'27.09px',
          '20.15':'20.15px',
+         '35':'35px',
+         '28':'28px',
+         '41':'41px',
+         '55':'55px',
+         '48':'48px',
+         '32':'32px',
        
 
       },
 
       width:{
         '85p':'85%',
+        '90p':'90%',
+        '95p':'95%',
+        '80p':'80%',
+
         '90p':'95%',
       },
       maxWidth: {
