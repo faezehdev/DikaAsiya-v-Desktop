@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// <<<<<<< HEAD
 
 header.classList.add('activeHeader')
 var elements = document.querySelectorAll('.ProCat');
@@ -31,28 +32,31 @@ window.addEventListener("scroll", function(){
     $("header").addClass("activeHeader"); 
 }
  })
-=======
-let section3 = document.querySelectorAll(".section3");
-$(function () {
-  fullpage();
-});
-// FULLPAGE
-function fullpage() {
-  $("#fullpage").fullpage({
-      // scrollingSpeed: 1000,
-    scrollBar: true,
-    //   autoScrolling: true,
-    //scrollOverflow:true,
-    // fitToSection: false,
-    afterLoad: function (origin, destination, direction, trigger) {
-      $(".section3").removeClass("activeSection");
-      if (destination.index>0) {
+// =======
+// let section3 = document.querySelectorAll(".section3");
+// =======
+// let snapSection = document.querySelectorAll(".snapSection");
+// >>>>>>> cd989a6afbe19a94c6b44220a2d9544cdd182e2f
+// $(function () {
+//   fullpage();
+// });
+// // FULLPAGE
+// function fullpage() {
+//   $("#fullpage").fullpage({
+//       // scrollingSpeed: 1000,
+//     scrollBar: true,
+//     //   autoScrolling: true,
+//     //scrollOverflow:true,
+//     // fitToSection: false,
+//     afterLoad: function (origin, destination, direction, trigger) {
+//       $(".snapSection").removeClass("activeSection");
+//       if (destination.index>0) {
       
-          console.log(destination.index);
-          console.log(section3[destination.index-1]);
-          section3[destination.index-1].classList.add("activeSection")
-      }
-    },
-  });
-}
->>>>>>> cfbde9a18e033b29b2812a21f40a8e7d11c9bf42
+//           console.log(destination.index);
+//           console.log(snapSection[destination.index-1]);
+//           snapSection[destination.index-1].classList.add("activeSection")
+//       }
+//     },
+//   });
+// }
+// >>>>>>> cfbde9a18e033b29b2812a21f40a8e7d11c9bf42

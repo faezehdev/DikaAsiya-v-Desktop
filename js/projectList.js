@@ -29,3 +29,14 @@ function loadMoreFn(params) {
     
     
 }
+
+let filterBtn = document.querySelectorAll(".filterBtn")
+
+filterBtn.forEach(element => {
+  element.addEventListener("click" , function (params) {
+    $('.projectContainer').imagesLoaded( function() {
+      // images have loaded
+      loadMoreFn();
+    });
+  })
+});

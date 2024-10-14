@@ -1,0 +1,150 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+  <member name="seolist" type="list" request="cat" id="[##cms.query.catid##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="[##cms.query.catid##]"> <member name="projectList" type="list" size="584x438" request="catname"/> </basis>	
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > <member request="cat" type="tree" name="filter" parentid="210214" size="584x438"></member> </basis>	
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <basis core="print" datamembername="db.seolist">
+    <face>
+        <title>[##cms.seo.title|db.seolist.title##]</title>
+        <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+    </face>
+</basis>
+
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css" />
+</head>
+
+<body>
+  <basis core="call" file="header.inc" />
+  <div class="projectList pb-16 bg-bgGray flex flex-col pt-44 justify-between" style="min-height: 100vh;">
+    <div class="inner">
+      <div class="title flex items-center w-90p mx-auto pb-4 border-b border-b-Woodsmoke400 mb-8">
+        <basis core="print" datamembername="db.filter">
+            <layout>
+              <h1 class="font-YekanBakh700 text-punch600 text-2xl">
+                <span class="text-blackTxt"> پروژه‌های </span>
+        
+                @child
+              </h1>
+            </layout>
+            
+            <face filter="catid='[##cms.query.catid##]'">
+             @title
+                
+            </face>
+        </basis>
+        <div class="dropdownssss absolute left-[2.5%]">
+          <basis core="print" datamembername="db.filter">
+              <layout>
+                <select style="background-color: transparent;text-align: left;" class="font-YekanBakh700 text-lg text-blackTxt" name="" id="">
+                  @child
+                </select>
+              </layout>
+              
+              <face filter="catid<>210214">
+                
+                <option class="font-YekanBakh700 text-lg text-blackTxt filterBtn"  data-project="/load-project.inc?catid=@catid&refresh=true" value="/load-project.inc?catid=@catid&refresh=true">
+                  پروژه‌های @title
+                </option>
+              </face>
+          </basis>
+        </div>
+      </div>
+      <div class="projectContainer  grid gap-8 grid-cols-2 w-90p mx-auto">
+        <basis core="print" datamembername="db.projectList">
+         
+            <else-layout>
+                <div class="para font-YekanBakh400 text-base text-blackTxt">
+                  <p>
+                    متاسفانه پروژه‌ای موجود نیست.
+                  </p>
+                </div>
+            </else-layout>
+            <face>
+              <div class="projectBox relative group">
+                <div class="imgS relative after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-t after:from-[#1C1C1CBF] after:to-#1C1C1C00">
+                  <a href="/@link" title="@title">
+                    <img class="w-full h-full object-cover" src="/@00584X00438prp" alt="@title"
+                      title="@title" />
+                  </a>
+                </div>
+                <div class="overTitle absolute bottom-8 left-0 right-0">
+                  <a href="/@link" title="@title">
+        
+                    <h2 class="font-YekanBakh700 text-xl text-white text-center">
+                    @title
+                    </h2>
+                  </a>
+                  <div class="more mt-4 flex-col items-center flex h-0 group-hover:h-fit" style="transition: height 0.7s;">
+                    <a class="w-fit -translate-y-[150%] duration-700 opacity-0 group-hover:translate-y-[0] group-hover:opacity-100 pb-1 relative justify-center"
+                      href="/@link">
+                      <div class="rm flex items-center pb-2">
+                        <span class="font-YekanBakh400 text-sm text-Woodsmoke50">
+        
+                          اطلاعات بیشتر
+                        </span>
+                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M2.78174 0.499939L0.495655 2.77069C0.177501 3.10181 -2.00074e-08 3.54237 0 4.00008C2.00074e-08 4.4578 0.177501 4.89764 0.495655 5.22875L2.78174 7.50008L3.60657 6.68078L1.48791 4.58341L14 4.58342L13.9998 3.41675L1.48791 3.41675L3.60657 1.31924L2.78174 0.499939Z"
+                            fill="#F6F6F6" />
+                        </svg>
+        
+        
+                      </div>
+                      <span class="w-full h-px bg-Woodsmoke50 block gap-x-2"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+                
+            </face>
+        </basis>
+       
+      </div>
+      <div class="loadMore cursor-pointer w-fit border-b border-b-blackTxt pb-1 mx-auto mt-16">
+        <div class="flex items-center gap-x-2">
+          <span class="font-YekanBakh400 text-sm text-blackTxt">
+            پروژه‌های بیشتر
+          </span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 6.41667H7.58333V0H6.41667V6.41667H0V7.58333H6.41667V14H7.58333V7.58333H14V6.41667Z"
+              fill="#1C1C1C" />
+          </svg>
+  
+        </div>
+      </div>
+
+    </div>
+
+    <basis core="call" file="footer.inc" />
+  </div>
+
+ <basis core="call" file="script.inc" />
+
+  <script src="[##cms.cms.cdn##]/_js/imageLoaded.js"></script>
+  <script src="[##cms.cms.cdn##]/js/projectList.js"></script>
+
+  <script>
+
+    let dropdowns = document.querySelector(".dropdownssss select")
+
+    dropdowns.addEventListener("change",function (params) {
+      console.log(this.value);
+      var url4 = this.value
+      $(".projectContainer").load(url4);
+      
+    })
+        //  $(document).ready(function () {
+        //         $(".filterBtn").click(function (e) {
+        //         });
+        //     });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2361918"> <member name="about" type="view"/> </basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2361918"> <member name="aboutGallery" type="list"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2361924"> <member name="history" type="view"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="210226"> <member name="bio" type="list" size="417x313" propertyid="2739,2732"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="210228"> <member name="team" type="list" size="248x340" propertyid="2732"/> </basis>
+ <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2361926">
+ <member name="strategy" type="view" postsql="select * from [db.strategy] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2361926"> <member name="strategyGallery" type="list" format="4"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2361928"> <member name="perspective" type="view"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="210229"> <member name="designer" type="list" size="344x340" propertyid="2732"/> </basis>	
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره‌ی ما</title>
+    <meta name="description" content="درباره‌ی دیکا آسیا" />
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+    <style>
+        .pin-spacer {
+            position: fixed !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="aboutUs bg-bgGray">
+        <div class="innerAbout relative">
+            <nav class="aboutNav fixed bottom-0 left-0 right-0 h-[80px]">
+                <ul class="w-90p mx-auto flex justify-between">
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            معرفی شرکت
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            تاریخچه
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            بیوگرافی مدیرعامل
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            پیام مدیرعامل
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            اعضای تیم
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            اهداف و استراتژی
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            چشم‌انداز و رسالت
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            معرفی همکاران
+                        </span>
+                    </li>
+                    <li class=" py-6 cursor-pointer duration-700">
+                        <span class="font-YekanBakh400 text-base text-Woodsmoke50">
+                            گالری تصاویر
+                        </span>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <section class="section1 h-svh overflow-hidden">
+                <div class="inner h-svh flex-col flex justify-end">
+                    <div class="section1 mb-16">
+                        <basis core="print" datamembername="db.about">
+                       
+                            <face filter="TypeID=150">
+                                <h1 class="font-YekanBakh700 text-[32px] text-blackTxt mb-2 text-center">
+        
+                                  @Answer
+                                </h1>
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.about">
+                           
+                            <face filter="TypeID=128">
+                                
+                                <div class="para font-YekanBakh400 text-xl text-blackTxt text-center">
+                                    <p>
+                                      @Answer
+                                    </p>
+                                </div>
+                            </face>
+                        </basis>
+                    </div>
+                    <div class="section2 relative">
+                        <div
+                            class="imgS relative after:absolute after:w-full after:h-full after:bg-[#1C1C1C80] after:inset-0">
+                           <basis core="print" datamembername="db.aboutGallery">
+                          
+                               <face filter="ord=1">
+                                   <img class="w-full" src="/@largeIMG" alt=" درباره‌ی شرکت دیکا آسیا"
+                                       title=" درباره‌ی شرکت دیکا آسیا">
+                                   
+                               </face>
+                           </basis>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="section2 darkSection scrolS scroll-1 bg-Woodsmoke800">
+                <div class="inner flex pt-16 pb-32 w-90p mx-auto gap-x-20 items-center">
+                    <div class="rSide w-[50%]">
+                        <h2 class="font-YekanBakh700 text-2xl mb-1 text-Woodsmoke50">
+                            درباره‌ی شرکت
+                            <span class="text-punch600">
+
+                                دیکا آسیا
+                            </span>
+                        </h2>
+                        <div class="para font-YekanBakh400 text-base text-Woodsmoke50">
+                            <basis core="print" datamembername="db.about">
+                             
+                                <face filter="TypeID=129">
+                                  @largetext
+                                    
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+
+                    <div class="lSide w-[50%]">
+                        <div class="lContainer flex justify-end items-center">
+                            <div class="inVideo flex items-center justify-center">
+                                <!-- <video poster="images/DSC05261.png" class="w-full object-cover">
+
+                                    <source src="">
+                                </video>
+                                <div class="playbtn cursor-pointer absolute">
+                                    <svg width="44" height="64" viewBox="0 0 44 64" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M39.6406 25.1707L0.666626 0V64L39.6248 38.7387C40.7588 38.0176 41.6937 37.0176 42.3422 35.8321C42.9907 34.6465 43.3317 33.3141 43.3333 31.9591C43.3349 30.6041 42.997 29.2708 42.3513 28.0837C41.7055 26.8966 40.7729 25.8944 39.6406 25.1707ZM36.7937 34.224L5.99996 54.224V9.75467L36.8121 29.6853C37.1926 29.9261 37.5061 30.2611 37.7227 30.6587C37.9394 31.0562 38.0522 31.5032 38.0503 31.9572C38.0485 32.4112 37.9321 32.8572 37.7122 33.2529C37.4923 33.6487 37.1761 33.9811 36.7937 34.2187V34.224Z"
+                                            fill="#F6F6F6" />
+                                    </svg>
+
+                                </div> -->
+                            
+                                <basis core="print" datamembername="db.aboutGallery">
+                                  
+                                    <face filter="ord=2">
+                                            <div class="imgS">
+                                                <img class="w-full h-full object-cover" src="/@largeIMG" alt="@name">
+                                            </div>
+                                    </face>
+                                </basis>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section3 scrolS  scroll-2 h-svh pt-16 pb-32 relative">
+                <div class="inScroll w-90p mx-auto overflow-auto h-full pl-10" data-scrollbar>
+                    <h3 class="font-YekanBakh700 text-2xl text-blackTxt pb-4 border-b border-b-Woodsmoke800">
+                        تاریخچه‌ی شرکت
+                        <span class="text-punch600">
+
+                            دیکا آسیا
+                        </span>
+                    </h3>
+                    <div class="hystories">
+                        <basis core="print" datamembername="db.history">
+                          
+                            <face filter="TypeID=250">
+                                <div class="historyItem py-4 flex justify-between items-center border-b border-b-Woodsmoke800">
+                                    <div class="title">
+                                        <h4 class="font-YekanBakh700 text-lg text-blackTxt mb-2">
+                                      @largetext
+                                        </h4>
+                                        <!-- <div class="para font-YekanBakh400 text-base text-blackTxt">
+                                            <p>
+                                                یک خط توضیح که باید اینجا در مورد عنوان نوشته شود.
+                                            </p>
+                                        </div> -->
+                                    </div>
+                                    <div class="date">
+                                        <span class="font-YekanBakh700 text-[32px] text-blackTxt">
+                                            @text
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                            </face>
+                        </basis>
+                      
+
+                    </div>
+                </div>
+            </section>
+            <section class="section4 darkSection scrolS scroll-3 pb-24 bg-Woodsmoke800 pt-6">
+                <div class="inner flex gap-x-20 w-90p mx-auto">
+
+                    <div class="rSide w-full flex flex-col items-center">
+                        <basis core="print" datamembername="db.bio">
+                          
+                            <face filter="RowNumber=1">
+                                <div class="imgS mb-2.5">
+                                    <img src="/@00417X00313prp" alt="">
+                                </div>
+                                <h5
+                                    class="text-center font-YekanBakh700 text-2xl text-Woodsmoke50 pb-4 border-b border-b-Woodsmoke50 w-full mb-4">
+                                    بیوگرافی مدیرعامل
+                                </h5>
+                                <div
+                                    class="para text-center font-YekanBakh400 text-base text-Woodsmoke50 pb-4 border-b border-b-Woodsmoke50">
+                                    <p>
+                                      @prp_2739
+                                    </p>
+                                </div>
+                                
+                            </face>
+                        </basis>
+                    </div>
+                    <div class="lSide w-full flex flex-col items-center">
+                        <basis core="print" datamembername="db.bio">
+                          
+                            <face filter="RowNumber=2">
+                                <div class="imgS mb-2.5">
+                                    <img src="/@00417X00313prp" alt="">
+                                </div>
+                                <h5
+                                    class="text-center font-YekanBakh700 text-2xl text-Woodsmoke50 pb-4 border-b border-b-Woodsmoke50 w-full mb-4">
+                                    بیوگرافی رییس هیئت مدیره 
+                                </h5>
+                                <div
+                                    class="para text-center font-YekanBakh400 text-base text-Woodsmoke50 pb-4 border-b border-b-Woodsmoke50">
+                                    <p>
+                                      @prp_2739
+                                    </p>
+                                </div>
+                                
+                            </face>
+                        </basis>
+                    </div>
+                </div>
+            </section>
+            <section class="section5 scrolS scroll-4">
+                <div class="inner pt-14 pb-32 flex w-90p mx-auto gap-x-10">
+                    <div class="rSide w-[270px] shrink-0">
+                        <div class="imgS">
+                            <basis core="print" datamembername="db.aboutGallery">
+                             
+                                <face filter="ord=3">
+                                    
+                                    <img class="w-[270px]" src="/@largeIMG" alt="@name">
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+                    <div class="lSide pt-2">
+                        <h5 class="font-YekanBakh700 text-2xl text-blackTxt pb-4 border-b border-b-Woodsmoke800 mb-4">
+                            پیام
+
+                            <span class="text-punch600">
+
+                                هیئت مدیره
+                            </span>
+                        </h5>
+                        <basis core="print" datamembername="db.about">
+                          
+                            <face filter="TypeID=250">
+                                <div class="para font-YekanBakh400 text-base text-blackTxt">
+                                  @largetext
+                                </div>
+                                
+                            </face>
+                        </basis>
+                    </div>
+                </div>
+            </section>
+            <section class="section6 darkSection scrolS scroll-5 bg-Woodsmoke800 relative">
+                <div class="inner w-90p mx-auto pt-16 pb-32">
+                    <h5 class="font-YekanBakh700 text-2xl text-Woodsmoke50 pb-4 border-b border-b-Woodsmoke50 mb-4">
+                        اعضای شرکت
+
+                        <span class="text-punch600">
+
+                            دیکا آسیا
+                        </span>
+                    </h5>
+
+
+                    <div class="sliderSection relative">
+
+                        <div class="swiper memberSlider w-90p mx-auto">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                 <basis core="print" datamembername="db.team">
+                                
+                                     <face >
+                                         <div class="swiper-slide">
+                                             <div class="imgS mb-3">
+                                                 <img class="w-full" src="/@00248X00340prp" alt="@title">
+                                             </div>
+                                             <div class="title">
+                                                 <span class="font-YekanBakh700 text-lg mb-1 text-Woodsmoke50">
+                                                   @title
+                                                 </span>
+                                                 <p class="font-YekanBakh400 text-base text-Woodsmoke50">
+                                                   @prp_2732
+                                                 </p>
+                                             </div>
+                                         </div>
+                                         
+                                     </face>
+                                 </basis>
+                             
+
+                            </div>
+
+                        </div>
+
+                        <div class="nextMember cursor-pointer absolute left-0 top-[40%] z-1">
+                            <svg class="rotate-180" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.411 13.914L0 12.5L5.28899 7.207L0 1.914L1.415 0.5L6.69999 5.793C7.07493 6.16806 7.28556 6.67667 7.28556 7.207C7.28556 7.73733 7.07493 8.24594 6.69999 8.621L1.411 13.914Z"
+                                    fill="#F6F6F6" />
+                            </svg>
+
+                        </div>
+                        <div class="prevMember cursor-pointer absolute right-0 top-[40%] z-1">
+                            <svg class="" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.411 13.914L0 12.5L5.28899 7.207L0 1.914L1.415 0.5L6.69999 5.793C7.07493 6.16806 7.28556 6.67667 7.28556 7.207C7.28556 7.73733 7.07493 8.24594 6.69999 8.621L1.411 13.914Z"
+                                    fill="#F6F6F6" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section7 scrolS scroll-6 pt-16 pb-32">
+                <div class="inner w-90p mx-auto">
+                    <h5 class="font-YekanBakh700 text-2xl text-blackTxt pb-4 mb-4">
+                        اهداف و استراتژی شرکت
+
+                        <span class="text-punch600">
+
+                            دیکا آسیا
+                        </span>
+                    </h5>
+
+                    <div class="flex gap-x-10 ">
+                        <div class="rSide w-full">
+                            <div class="imgS">
+                                <basis core="print" datamembername="db.strategyGallery">
+                                   
+                                    <face filter="ord=1000">
+                                        <img src="/@largeIMG" alt="@name">
+                                        
+                                    </face>
+                                </basis>
+                            </div>
+                        </div>
+                        <div class="lSide w-full">
+                            <ul>
+                                <basis core="print" datamembername="db.strategy">
+                              
+                                    <face filter="TypeID=250">
+                                        <li class="flex items-center gap-x-4 py-5 border-t border-t-Woodsmoke400">
+                                            <div class="Number">
+                                                <span class="font-YekanBakh700 text-[32px] text-punch600">
+                                                    0@RowNumber.
+                                                </span>
+                                            </div>
+                                            <div class="info">
+                                                <h6 class="font-YekanBakh700 text-blackTxt text-lg mb-2">
+                                                   @text
+                                                </h6>
+                                                <div class="para font-YekanBakh400 text-base">
+                                                   @largetext
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </face>
+                                </basis>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section8 darkSection scrolS scroll-7 bg-Woodsmoke800 pt-16 pb-32">
+                <div class="inner w-90p mx-auto">
+                    <div class="imgS mb-6">
+                        <basis core="print" datamembername="db.aboutGallery">
+                          
+                            <face filter="ord=1000">
+                                <img class="w-full" src="/@largeIMG" alt="@name">
+                                
+                            </face>
+                        </basis>
+                    </div>
+                    <h5
+                        class="font-YekanBakh700 text-center text-2xl text-Woodsmoke50 pb-4 border-b border-b-Woodsmoke50 mb-4">
+                        اعضای شرکت
+
+                        <span class="text-punch600">
+
+                            دیکا آسیا
+                        </span>
+                    </h5>
+                    <div class="para font-YekanBakh400 text-base text-Woodsmoke50 text-center">
+                        <p>
+                            ﺷﺮﮐﺖ (ﻓﻨــﯽ- ﻣﻬﻨﺪﺳــﯽ) دﯾﮑﺎ آﺳﯿﺎ، ارزش ﻓﻀﺎی ﺷﻤﺎ را ﮔﺴﺘﺮش ﻣﯽ دﻫﺪ. اﯾﺪه‌ﻫا و راهﺣﻞﻫﺎی دﯾﮑﺎ،
+                            ﻣﺴﺎﺣﺖ ﻣﻔﯿﺪ و ﻣﻮﺛﺮ ﻓﻀﺎی ﮐﺎری را از ﺣﺪ اﻧﺘﻈﺎر ﺷﻤﺎ، ﻓﺮاﺗر می‌ﺑﺮﻧﺪ.
+                            دﯾﻮارﻫﺎی ﭘﯿﺶ ﺳﺎخته‌ی دﯾﮑﺎ ﺑﺎ ﻗﻄﻌﺎت اﺳﺘﺎﻧﺪارد.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="section9 scrolS scroll-8 pt-16 pb-32">
+
+                <div class="inner w-90p mx-auto">
+                    <p class="font-YekanBakh700 text-2xl text-blackTxt pb-4 border-b border-b-blackTxt mb-4">
+                        برخی از طراحانی که با شرکت
+
+                        <span class="text-punch600">
+
+                            دیکا آسیا
+                        </span>
+
+                        همکاری داشته‌اند
+
+                    </p>
+                    <div class="sliderSection relative">
+
+                        <div class="swiper partnerSlider w-90p mx-auto">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                 <basis core="print" datamembername="db.designer">
+                                 
+                                     <face>
+                                         <div class="swiper-slide">
+                                             <div class="imgS mb-3">
+                                                 <img class="w-full" src="/@00344X00340prp" alt="@title">
+                                             </div>
+                                             <div class="title">
+                                                 <span class="font-YekanBakh700 text-lg mb-1 text-blackTxt">
+                                                   @title
+                                                 </span>
+                                                 <p class="font-YekanBakh400 text-base text-blackTxt">
+                                                   @prp_2732
+                                                 </p>
+                                             </div>
+                                         </div>
+                                         
+                                     </face>
+                                 </basis>
+                              
+
+                            </div>
+
+                        </div>
+
+                        <div class="nextpartner cursor-pointer absolute left-0 top-[40%] z-1">
+                            <svg class="rotate-180" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.411 13.914L0 12.5L5.28899 7.207L0 1.914L1.415 0.5L6.69999 5.793C7.07493 6.16806 7.28556 6.67667 7.28556 7.207C7.28556 7.73733 7.07493 8.24594 6.69999 8.621L1.411 13.914Z"
+                                    fill="#1C1C1C" />
+                            </svg>
+
+                        </div>
+                        <div class="prevpartner cursor-pointer absolute right-0 top-[40%] z-1">
+                            <svg class="" width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.411 13.914L0 12.5L5.28899 7.207L0 1.914L1.415 0.5L6.69999 5.793C7.07493 6.16806 7.28556 6.67667 7.28556 7.207C7.28556 7.73733 7.07493 8.24594 6.69999 8.621L1.411 13.914Z"
+                                    fill="#1C1C1C" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section10 darkSection scrolS scroll-9 bg-Woodsmoke800 relative pt-16 pb-32">
+                <div class="title pr-[2.5%]">
+                    <h4 class="font-YekanBakh700 text-Woodsmoke50 text-2xl pb-4 mb-4 border-b border-b-w50text-Woodsmoke50">
+                        گالری تصاویر
+                    </h4>
+                </div>
+    
+                <div class="sliderSection">
+                    <div class="swiper gallerySlider px-[2.5%]">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                             <basis core="print" datamembername="db.aboutGallery">
+                             
+                                 <face filter="ord=1000">
+                                     <div class="swiper-slide ">
+             
+                                         <div class="imgS overflow-hidden">
+                                             <img class="w-full duration-1000" src="images/HAM_8504_12.png" alt="@name">
+                                         </div>
+                                     </div>
+                                     
+                                 </face>
+                             </basis>
+                          
+                         
+    
+                        </div>
+    
+    
+                        <div class="btns mt-7 flex justify-center items-center gap-x-3">
+                            <div class="prevBtn cursor-pointer">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.84282 11.345L0.666992 10.1666L5.07448 5.75579L0.666992 1.34496L1.84616 0.166626L6.25032 4.57746C6.56277 4.89001 6.73829 5.31385 6.73829 5.75579C6.73829 6.19773 6.56277 6.62158 6.25032 6.93413L1.84282 11.345Z"
+                                        fill="#888888" />
+                                </svg>
+    
+                            </div>
+                            <div class="galleryPagination !w-fit"></div>
+                            <div class="nextBtn cursor-pointer">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.5658 11.345L1.15497 6.93413C0.842518 6.62158 0.666992 6.19773 0.666992 5.75579C0.666992 5.31385 0.842518 4.89001 1.15497 4.57746L5.5658 0.166626L6.74414 1.34496L2.33664 5.75579L6.74747 10.1666L5.5658 11.345Z"
+                                        fill="#888888" />
+                                </svg>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+   
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/_js/smooth-scrollbar.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/aboutUs.js"></script>
+</body>
+
+</html>
