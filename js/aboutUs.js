@@ -3,15 +3,7 @@ let aboutNav = document.querySelectorAll(".aboutNav ul li")
 
 let navContainer=document.querySelector(".aboutNav")
   
-  const lenis = new Lenis()
-  
-  
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
-  
-  requestAnimationFrame(raf)
+
 
 
   // let tl = gsap.timeline({
