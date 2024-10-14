@@ -35,18 +35,15 @@ module.exports = {
       'Woodsmoke800':'#454545',
       'Woodsmoke50':'#F6F6F6',
       'punch600':'#E33026',
-<<<<<<< HEAD
       'Woodsmoke/50':'#F6F6F6',
       'Woodsmoke800':'#454545',
       'Woodsmoke600':'#5D5D5D',
-      'White':'#fff'
+      'White':'#fff',
 
-=======
       'white':'#ffffff',
       'black':'#000000',
       
         
->>>>>>> cfbde9a18e033b29b2812a21f40a8e7d11c9bf42
     },
     fontFamily: {
       'YekanBakh700': ['YekanBakh700', 'YekanBakh700'],
@@ -100,14 +97,11 @@ module.exports = {
 
       width:{
         '85p':'85%',
-<<<<<<< HEAD
         '90p':'90%',
         '95p':'95%',
         '80p':'80%',
 
-=======
         '90p':'95%',
->>>>>>> cfbde9a18e033b29b2812a21f40a8e7d11c9bf42
       },
       maxWidth: {
         'x100': '100%',
