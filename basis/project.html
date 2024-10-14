@@ -1,0 +1,286 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
+
+   <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="projectGallery" type="list" format="4"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="project" type="view"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="relatedProduct" type="list" blgid="630" size="387x289"/> </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="relatedProject" type="list" blgid="629" size="373x289"/> </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+
+<body>
+    <div class="project bg-bgGray">
+        <section class="section1 relative">
+
+            <basis core="print" datamembername="db.projectGallery">
+                <layout>
+                    <div class="imgS relative h-svh overflow-hidden after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-t after:from-[#1C1C1CBF] after:to-#1C1C1C00">
+                        @child
+                    </div>
+                </layout>
+                
+                <face filter="ord=1">
+                    <img class="w-full scale-125 h-full object-cover duration-1000" src="/@largeIMG" alt="@name">
+                    
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.project">
+                <layout>
+                    <div class="overTitle absolute left-0 right-0 bottom-32 overflow-hidden py-5">
+                        @child
+                    </div>
+                </layout>
+                
+                <face filter="TypeID=150">
+                    <h1 class="text-center duration-1000 font-YekanBakh700 text-[32px] translate-y-[300%] text-Woodsmoke50">
+                        
+                        پروژه‌ی @Answer  
+                        
+                    </h1>
+                    
+                </face>
+            </basis>
+
+        </section>
+        <section class="section2 scrollTop w-90p mx-auto my-16">
+            <div class="flex justify-between items-baseline">
+                <div class="rSide w-[65%]">
+                    <basis core="print" datamembername="db.project">
+                     
+                        <face filter="TypeID=150">
+                            <h1 class="font-YekanBakh700 text-2xl text-punch600 pb-4 border-b border-b-blackTxt mb-4">
+                                <span class="text-blackTxt">
+        
+                                    پروژه‌ی
+                                </span>
+        
+                           @Answer
+                            </h1>
+                            
+                        </face>
+                    </basis>
+
+                    <basis core="print" datamembername="db.project">
+                    
+                        <face filter="TypeID=144">
+                            
+                            <div class="para font-YekanBakh400 text-base text-blackTxt mb-4">
+                               @Answer
+                            </div>
+                        </face>
+                    </basis>
+                </div>
+                <div class="lSide w-[31%]">
+                    <h3 class="font-YekanBakh700 text-xl text-blackTxt pb-4 border-b border-blackTxt mb-4">
+                        خلاصه‌ی اطلاعات پروژه
+                    </h3>
+                    <basis core="view" datamembername="db.project">
+                        <layout>
+                            <div class="schemas">
+                                <ul>
+                                    @child
+                                </ul>
+                            </div>
+                        </layout>
+                        
+                        <face filter="TypeID not in (150,144,159)" level="1">
+                            <li class="flex gap-x-6 mb-3 items-baseline">
+                                <span class="font-YekanBakh700 text-lg text-blackTxt whitespace-nowrap">
+                                    @Question:
+                                </span>
+                                <div class="schema flex flex-wrap gap-x-1">
+                                    @child
+                                </div>
+                            </li>
+                            
+                        </face>
+                        <face level="2">
+                        <p class="font-YekanBakh400 text-base whitespace-nowrap text-blackTxt">
+                          @Answer
+                        </p>
+                        <span class="font-YekanBakh400 text-base text-blackTxt last:hidden">,</span>
+                    </face>
+                    </basis>
+                </div>
+            </div>
+        </section>
+
+        <basis core="print" datamembername="db.projectGallery">
+            <layout>
+                <section class="section3 scrollTop mb-16">
+                    <div class="title w-90p mx-auto">
+                        <h4 class="font-YekanBakh700 text-blackTxt text-2xl pb-4 mb-4 border-b border-b-blackTxt">
+                            گالری تصاویر
+                        </h4>
+                    </div>
+        
+                    <div class="sliderSection">
+                        <div class="swiper gallerySlider px-[2.5%]">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                        
+                             
+                                @child
+                            </div>
+        
+        
+                            <div class="btns mt-7 flex justify-center items-center gap-x-3">
+                                <div class="prevBtn cursor-pointer">
+                                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.84282 11.345L0.666992 10.1666L5.07448 5.75579L0.666992 1.34496L1.84616 0.166626L6.25032 4.57746C6.56277 4.89001 6.73829 5.31385 6.73829 5.75579C6.73829 6.19773 6.56277 6.62158 6.25032 6.93413L1.84282 11.345Z"
+                                            fill="#888888" />
+                                    </svg>
+        
+                                </div>
+                                <div class="galleryPagination !w-fit"></div>
+                                <div class="nextBtn cursor-pointer">
+                                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.5658 11.345L1.15497 6.93413C0.842518 6.62158 0.666992 6.19773 0.666992 5.75579C0.666992 5.31385 0.842518 4.89001 1.15497 4.57746L5.5658 0.166626L6.74414 1.34496L2.33664 5.75579L6.74747 10.1666L5.5658 11.345Z"
+                                            fill="#888888" />
+                                    </svg>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+            
+            </layout>
+      
+            <face filter="ord=1000">
+                <div class="swiper-slide ">
+        
+                    <div class="imgS overflow-hidden">
+                        <img class="w-full duration-1000" src="/@largeIMG" alt="@name">
+                    </div>
+                </div>
+            </face>
+        </basis>
+        <basis core="print" datamembername="db.relatedProject">
+            <layout>
+                <section class="section4 mb-16 scrollTop w-90p mx-auto">
+                    <div class="title">
+                        <h4 class="font-YekanBakh700 text-blackTxt text-2xl pb-4 mb-4 border-b border-b-blackTxt">
+                            پروژه‌های مرتبط
+                        </h4>
+                    </div>
+        
+                    <div class="swiper relProject">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                       
+                           @child
+                       
+                        
+                        </div>
+                      
+                      </div>
+                </section>
+            
+            </layout>
+         
+            <face>
+                <div class="swiper-slide">
+                    <a class="relative" href="/@link" title="@title">
+                        <div class="imgS">
+                            <img class="w-full overflow-hidden duration-1000" src="/@00373X00289prp" alt="@title" title="@title">
+                        </div>
+
+                        <div class="overTitle absolute bottom-0 left-0 mx-auto right-0 w-[320px] h-[114px] bg-blackTxt/[0.5] border border-Woodsmoke50">
+                            <div class="inner duration-1000 relative w-full h-full flex justify-center items-center">
+                                <span class="font-YekanBakh400 text-base bg-Woodsmoke50 rounded-[6px] w-fit mx-auto -translate-y-[50%] text-blackTxt px-2.5 absolute top-0 left-0 right-0">
+                                    پروژه‌ی
+                                </span>
+
+                                <h5 class="font-YekanBakh700 text-xl text-Woodsmoke50 text-center">
+                                    @title
+                                </h5>
+                            </div>
+                        </div>
+                    </a>
+              </div>
+            </face>
+        </basis>
+
+        <basis core="print" datamembername="db.relatedProduct">
+            <layout>
+                <section class="section5 scrollTop w-90p mx-auto pb-8">
+                    <div class="title">
+                        <h4 class="font-YekanBakh700 text-blackTxt text-2xl pb-4 mb-4 border-b border-b-blackTxt">
+                            پروژه‌های مرتبط
+                        </h4>
+                    </div>
+        
+                    <div class="swiper relProduct">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                         
+                             @child
+                        </div>
+                       
+                      </div>
+                </section>
+           
+            </layout>
+         
+            <face>
+                <div class="swiper-slide">  
+                    <a class="flex items-center" href="/@link" title="@title">
+
+                        <div class="imgS w-full relative after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-r after:from-[#1C1C1CBF] after:to-#1C1C1C00">
+                            <img class="w-full" src="/@00387X00289prp" alt="@title" title="@title">
+                        </div>
+
+                        <div class="overTitle absolute left-10">
+                                <h5 class="font-YekanBakh700 text-Woodsmoke50 text-xl">
+                                  @title
+                                </h5>
+                        </div>
+                    </a>
+                    </div>
+            </face>
+        </basis>
+       
+
+    </div>
+
+
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/scroll.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/imageLoaded.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/project.js"></script>
+
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
+</body>
+
+</html>

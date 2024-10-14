@@ -1,532 +1,382 @@
-<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1">
-    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
-  </basis>
-  <basis core="dbsource" source="basiscore" mid="20" name="db" lid="1" usedforid="[##cms.query.id##]">
-    <member name="list5" type="list" request="groupid"></member>
-  </basis>
-  <basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
-    <member request="json-ld" type="scalar" name="fq" /> 
-   </basis>
-   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" usedforid="[##cms.query.id##]"> <member name="aboutus" type="view"/> </basis>
-  
-    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="image" type="list" format="image"/> </basis>
-     <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="pdf" type="list" format="pdf"/> </basis>
-     <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="[##cms.query.id##]"> <member name="video" type="list" format="video"/> </basis>
-    
-     <basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" usedforid="[##cms.query.id##]">
-         <member type="list" name="relatedproject" size="857x749" blgid="629"  propertyid="91220"  postsql=" select *, SUBSTR(prp_91220, 1,230-CHARINDEX(' ', REVERSE(SUBSTR(prp_91220, 1, 230)))) || '...' as substr from [db.relatedproject]"/> 
-        </basis>	
-     <basis core="dbsource" source="basiscore" name="db" lid="2" mid="19" usedforid="[##cms.query.id##]"> <member type="list" name="relatedprojecten" size="857x749" blgid="629"  propertyid="91220"/> </basis>	
-  
-  
-     <basis core="inlinesource" name="db" >
-        <member name="join" lefttblcol="db.relatedproject.id" righttblcol="db.relatedprojecten.id" format="join" jointype="leftjoin" />
-      </basis>
-    
-  
-  <!DOCTYPE html>
-  <html lang="fa">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <basis core="print" datamembername="db.seolist">
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="article" type="view" />
+</basis> 
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]">
+    <member name="articleGallery" type="list" format="4" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="relatedblog" type="list" blgid="222" size="220x269" propertyid="7246"
+    postsql="select id,title , link ,date ,[00220X00269prp] as image from [db.relatedblog]" />
+
+        <member name="relatedblogNull" type="list" blgid="222" size="220x269" propertyid="7246" postsql="select * from [db.relatedblogNull] WHERE image IS null"/>
+
+</basis>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="fq" />
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <basis core="print" datamembername="db.list">
         <face>
-            <title>[##cms.seo.title|db.seolist.title##]</title>
-            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+            <title>[##cms.seo.title|db.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
         </face>
     </basis>
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
-  </head>
-  
-  <body>
-  
-    <basis core="call" file="header.inc" />
-    <div class="projectShow">
-     
-        <div class="topSection overflow-hidden flex gap-x-10 pt-32">
-  
-            <div class="rSec w-[66%]">
-  
-                <basis core="print" datamembername="db.image">
-                   
-                    <face filter="ord>0 and ord<9">
-                        <div class="imgS mb-1">
-                            <img class="w-full" src="@largeIMG" alt="@name">
-                        </div>
-                        
-                    </face>
-                </basis>
-             
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newDesign/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newDesign/css/newStyle.css" />
+</head>
+
+<body>
+    <basis core="call" file="newHeader.inc" />
+    <div class="blogShow">
+        <div class="sidebar">
+            <div class="logoSection">
+                <a href="/" title="seyhan sayal">
+                    <img src="[##cms.cms.cdn##]/images/logo-header.png" alt="seyhan sayal" title="seyhan sayal" />
+                </a>
             </div>
-  
-            <div class="w-[27%] two pl-[5%] top-0">
-  
-                <div class="innerScroll pr-10 overflow-hidden " style="height: 79vh;" data-scrollbar>
-  
-                    <div class="title mb-5 flex justify-between gap-x-2">
-                        <basis core="print" datamembername="db.aboutus">
-  
-                            <face filter="TypeID=150">
-                                <h1 class="font-Ravi500 text-lg text-dark">
-                                    @Answer
-                                </h1>
-  
+            <button class="back" onclick="history.back()">
+                <span> بازگشت </span>
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L3.5 3.5L6 6L3.5 8.5L1 11" stroke="#FF9900" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="innerBlog">
+            <div class="mid"></div>
+
+            <div class="section1">
+                <div class="imgS">
+                    <basis core="print" datamembername="db.articleGallery">
+                        <face filter="ord=1">
+                            <img src="/@largeIMG" alt="[##cms.seo.title##]" title="[##cms.seo.title##]" />
+                        </face>
+                    </basis>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="blogData">
+                    <basis core="print" datamembername="db.article">
+                        <face filter="TypeID=150">
+                            <h1>@Answer</h1>
+                        </face>
+                    </basis>
+                    <div class="date">
+                        <basis core="print" datamembername="db.article">
+                            <face filter="prpID=7249">
+                                <span> @Answer</span>
                             </face>
                         </basis>
-  
-                        <div class="share relative">
-                            <ul class="share__wrapper share__wrapper--open-left">
-                                <li class="social-link">
-                                    <a href="https://www.linkedin.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" title="linkedin">
-                                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5.93328 6.56053C5.93328 6.28439 5.70942 6.06053 5.43328 6.06053C5.15713 6.06053 4.93328 6.28439 4.93328 6.56053H5.93328ZM4.93328 13.8481C4.93328 14.1242 5.15713 14.3481 5.43328 14.3481C5.70942 14.3481 5.93328 14.1242 5.93328 13.8481H4.93328ZM13.4322 13.8481C13.4322 14.1242 13.6561 14.3481 13.9322 14.3481C14.2083 14.3481 14.4322 14.1242 14.4322 13.8481H13.4322ZM13.9322 9.17296H14.4322L14.4322 9.17211L13.9322 9.17296ZM11.1008 6.34161L11.1017 5.84161H11.1008L11.1008 6.34161ZM7.76463 13.8481C7.76463 14.1242 7.98849 14.3481 8.26463 14.3481C8.54077 14.3481 8.76463 14.1242 8.76463 13.8481H7.76463ZM8.76463 6.56053C8.76463 6.28439 8.54077 6.06053 8.26463 6.06053C7.98849 6.06053 7.76463 6.28439 7.76463 6.56053H8.76463ZM17.527 1V0.5V1ZM1.47297 1V0.5V1ZM0.5 1.97297H0H0.5ZM0.5 18.027H0H0.5ZM5.29814 4.87244C5.29814 4.79781 5.35864 4.73731 5.43328 4.73731V5.73731C5.91093 5.73731 6.29814 5.35009 6.29814 4.87244H5.29814ZM5.43328 4.73731C5.50791 4.73731 5.56841 4.79781 5.56841 4.87244H4.56841C4.56841 5.35009 4.95563 5.73731 5.43328 5.73731V4.73731ZM5.56841 4.87244C5.56841 4.94708 5.50791 5.00758 5.43328 5.00758V4.00758C4.95563 4.00758 4.56841 4.39479 4.56841 4.87244H5.56841ZM5.43328 5.00758C5.35864 5.00758 5.29814 4.94708 5.29814 4.87244H6.29814C6.29814 4.39479 5.91093 4.00758 5.43328 4.00758V5.00758ZM4.93328 6.56053V13.8481H5.93328V6.56053H4.93328ZM14.4322 13.8481V9.17296H13.4322V13.8481H14.4322ZM14.4322 9.17211C14.4307 8.28927 14.0793 7.44302 13.455 6.81876L12.7479 7.52587C13.1851 7.96302 13.4311 8.55561 13.4322 9.17382L14.4322 9.17211ZM13.455 6.81876C12.8308 6.1945 11.9845 5.84313 11.1017 5.84161L11.1 6.84161C11.7182 6.84267 12.3108 7.08873 12.7479 7.52587L13.455 6.81876ZM11.1008 5.84161C10.217 5.84161 9.3693 6.19232 8.7438 6.81674L9.4503 7.52446C9.88831 7.0872 10.4819 6.84161 11.1008 6.84161L11.1008 5.84161ZM8.7438 6.81674C8.11831 7.44117 7.76614 8.28828 7.76463 9.17211L8.76463 9.17382C8.76569 8.55491 9.01229 7.96172 9.4503 7.52446L8.7438 6.81674ZM7.76463 9.17296V13.8481H8.76463V9.17296H7.76463ZM8.76463 9.17296V6.56053H7.76463V9.17296H8.76463ZM17.527 0.5H1.47297V1.5H17.527V0.5ZM1.47297 0.5C1.08232 0.5 0.70766 0.655188 0.431424 0.931424L1.13853 1.63853C1.22723 1.54983 1.34753 1.5 1.47297 1.5V0.5ZM0.431424 0.931424C0.155188 1.20766 0 1.58232 0 1.97297H1C1 1.84753 1.04983 1.72723 1.13853 1.63853L0.431424 0.931424ZM0 1.97297V18.027H1V1.97297H0ZM0 18.027C0 18.4177 0.155187 18.7923 0.431424 19.0686L1.13853 18.3615C1.04983 18.2728 1 18.1525 1 18.027H0ZM0.431424 19.0686C0.70766 19.3448 1.08232 19.5 1.47297 19.5V18.5C1.34753 18.5 1.22723 18.4502 1.13853 18.3615L0.431424 19.0686ZM1.47297 19.5H17.527V18.5H1.47297V19.5ZM17.527 19.5C17.9177 19.5 18.2923 19.3448 18.5686 19.0686L17.8615 18.3615C17.7728 18.4502 17.6525 18.5 17.527 18.5V19.5ZM18.5686 19.0686C18.8448 18.7923 19 18.4177 19 18.027H18C18 18.1525 17.9502 18.2728 17.8615 18.3615L18.5686 19.0686ZM19 18.027V1.97297H18V18.027H19ZM19 1.97297C19 1.58232 18.8448 1.20766 18.5686 0.931424L17.8615 1.63853C17.9502 1.72723 18 1.84753 18 1.97297H19ZM18.5686 0.931424C18.2923 0.655187 17.9177 0.5 17.527 0.5V1.5C17.6525 1.5 17.7728 1.54983 17.8615 1.63853L18.5686 0.931424Z" fill="#262627"/>
-                                            </svg>
-                                            
-  
-                                    </a>
-                                </li>
-                                <li class="social-link">
-                                    <a href="https://api.whatsapp.com/send?text=[##cms.request.host##]/[##db.list5.link##]" title="whatsapp">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.0163 19C8.39887 19 6.81418 18.5631 5.42621 17.7439L5.09834 17.5473L1.68852 18.443L2.59562 15.1226L2.37704 14.784C1.47841 13.3498 1.00125 11.6921 1 10C1 5.04126 5.0437 1 10.0054 1C12.4098 1 14.6721 1.93932 16.366 3.6432C17.2048 4.47763 17.8695 5.47014 18.3217 6.56321C18.7738 7.65627 19.0043 8.82815 18.9999 10.0109C19.0218 14.9697 14.9781 19 10.0163 19ZM14.9562 12.2718C14.683 12.1408 13.3497 11.4854 13.1092 11.3871C12.8579 11.2998 12.683 11.2561 12.4972 11.5182C12.3114 11.7913 11.7978 12.4029 11.6448 12.5777C11.4918 12.7634 11.3278 12.7852 11.0546 12.6432C10.7814 12.5121 9.90706 12.2172 8.87974 11.2998C8.071 10.5789 7.53549 9.69417 7.37155 9.42112C7.21855 9.14806 7.34969 9.00607 7.49177 8.86408C7.61199 8.74393 7.76499 8.54733 7.89614 8.39442C8.02729 8.2415 8.08193 8.12136 8.16936 7.9466C8.25679 7.76092 8.21308 7.60801 8.14751 7.47694C8.08193 7.34587 7.53549 6.01335 7.31691 5.46723C7.09833 4.94296 6.86882 5.0085 6.70489 4.99757H6.1803C5.99451 4.99757 5.71036 5.06311 5.45899 5.33617C5.21856 5.60922 4.51911 6.26456 4.51911 7.59709C4.51911 8.92961 5.49178 10.2184 5.62293 10.3932C5.75408 10.5789 7.53549 13.3095 10.2459 14.4782C10.8907 14.7621 11.3934 14.926 11.7868 15.0461C12.4316 15.2536 13.0218 15.2209 13.4917 15.1553C14.0163 15.0789 15.0983 14.5 15.3169 13.8665C15.5464 13.233 15.5464 12.6978 15.4699 12.5777C15.3934 12.4575 15.2294 12.4029 14.9562 12.2718Z"
-                                                stroke="#262627" />
-                                        </svg>
-  
-                                    </a>
-                                </li>
-                                <li class="social-link">
-                                    <a href="https://www.instagram.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" title="instagram">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M15.2033 5.17622C15.104 5.17622 15.0087 5.13673 14.9384 5.06645C14.8681 4.99617 14.8286 4.90086 14.8286 4.80147C14.8286 4.70208 14.8681 4.60676 14.9384 4.53648C15.0087 4.4662 15.104 4.42672 15.2033 4.42672M15.2033 5.17622C15.3027 5.17622 15.398 5.13673 15.4683 5.06645C15.5386 4.99617 15.5781 4.90086 15.5781 4.80147C15.5781 4.70208 15.5386 4.60676 15.4683 4.53648C15.398 4.4662 15.3027 4.42672 15.2033 4.42672"
-                                                stroke="#262627" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M1.0015 4.85693C1.0015 3.83401 1.40782 2.85298 2.13107 2.12967C2.85433 1.40635 3.83527 1 4.85811 1H15.1434C15.6498 1 16.1513 1.09976 16.6193 1.29359C17.0872 1.48742 17.5123 1.77152 17.8704 2.12967C18.2285 2.48782 18.5126 2.913 18.7064 3.38095C18.9002 3.84889 19 4.35043 19 4.85693V15.1431C19 16.166 18.5937 17.147 17.8704 17.8703C17.1472 18.5936 16.1662 19 15.1434 19H4.85661C3.83377 19 2.85283 18.5936 2.12957 17.8703C1.40632 17.147 1 16.166 1 15.1431L1.0015 4.85693Z"
-                                                stroke="#262627" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M6.17862 10C6.17862 10.502 6.27748 10.999 6.46956 11.4628C6.66164 11.9266 6.94317 12.3479 7.29809 12.7029C7.65301 13.0578 8.07436 13.3394 8.53808 13.5315C9.0018 13.7236 9.49882 13.8225 10.0007 13.8225C10.5027 13.8225 10.9997 13.7236 11.4634 13.5315C11.9271 13.3394 12.3485 13.0578 12.7034 12.7029C13.0583 12.3479 13.3399 11.9266 13.5319 11.4628C13.724 10.999 13.8229 10.502 13.8229 10C13.8229 8.98622 13.4202 8.01397 12.7034 7.29712C11.9866 6.58027 11.0144 6.17755 10.0007 6.17755C8.98706 6.17755 8.01488 6.58027 7.29809 7.29712C6.5813 8.01397 6.17862 8.98622 6.17862 10Z"
-                                                stroke="#262627" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-  
-                                    </a>
-                                </li>
-                                <button class="toggle-button">
-  
-                                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.75 3.33333L4.25 5.66667M7.75 10.6667L4.25 8.33333M4.25 7C4.25 7.44203 4.06563 7.86595 3.73744 8.17851C3.40925 8.49107 2.96413 8.66667 2.5 8.66667C2.03587 8.66667 1.59075 8.49107 1.26256 8.17851C0.934374 7.86595 0.75 7.44203 0.75 7C0.75 6.55797 0.934374 6.13405 1.26256 5.82149C1.59075 5.50893 2.03587 5.33333 2.5 5.33333C2.96413 5.33333 3.40925 5.50893 3.73744 5.82149C4.06563 6.13405 4.25 6.55797 4.25 7ZM11.25 11.3333C11.25 11.7754 11.0656 12.1993 10.7374 12.5118C10.4092 12.8244 9.96413 13 9.5 13C9.03587 13 8.59075 12.8244 8.26256 12.5118C7.93437 12.1993 7.75 11.7754 7.75 11.3333C7.75 10.8913 7.93437 10.4674 8.26256 10.1548C8.59075 9.84226 9.03587 9.66667 9.5 9.66667C9.96413 9.66667 10.4092 9.84226 10.7374 10.1548C11.0656 10.4674 11.25 10.8913 11.25 11.3333ZM11.25 2.66667C11.25 3.10869 11.0656 3.53262 10.7374 3.84518C10.4092 4.15774 9.96413 4.33333 9.5 4.33333C9.03587 4.33333 8.59075 4.15774 8.26256 3.84518C7.93437 3.53262 7.75 3.10869 7.75 2.66667C7.75 2.22464 7.93437 1.80072 8.26256 1.48816C8.59075 1.17559 9.03587 1 9.5 1C9.96413 1 10.4092 1.17559 10.7374 1.48816C11.0656 1.80072 11.25 2.22464 11.25 2.66667Z"
-                                            stroke="#262627" stroke-linecap="round" />
-                                    </svg>
-  
-                                </button>
-                            </ul>
-                        </div>
                     </div>
-    <div class="schemas">
-                                <ul>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="TypeID not in (150,159,144) and prpID not in (91198,91201,91195,91205,91208,91209,91207)" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    @Question :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91198" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    سرمایه‌گذار و توسعه‌دهنده :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91201" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    مجری:
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91195" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    نوع سازه:
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91205" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    تعداد طبقات :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91208" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    زیربنای مشاعات :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91209" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    مساحت زیربنای مسکونی :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="view" datamembername="db.aboutus">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face filter="prpID=91207" level="1">
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    مساحت واحدها :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    @child
-                                </div>
-                            </li>
-  
-                        </face>
-                        <face level="2">
-                            <p class="font-Ravi400 text-sm text-dark">
-                                @Answer
-                            </p>
-                            <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                ,
-                            </span>
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.video">
-                        <layout>
-                          
-                                    @child
-                             
-                        </layout>
-  
-                        <face>
-                            <li
-                                class="flex gap-x-2 mb-2.5 before:shrink-0 before:translate-y-[10px] before:w-[5px] before:h-[5px] before:bg-dark before:rounded-full before:inline-block">
-                                <span class="font-Ravi500 text-dark text-sm whitespace-nowrap">
-                                    متراژ واحدها :
-                                </span>
-                                <div class="schema flex flex-wrap gap-x-1">
-                                    <p class="font-Ravi400 text-sm text-dark">
-                                        @name
-                                    </p>
-                                    <span class="font-Ravi400 text-sm text-dark last:hidden">
-                                        ,
-                                    </span>
-                                </div>
-                            </li>
-  
-                        </face>
-                       
+                </div>
+                <div class="blogContainer">
+                    <basis core="print" datamembername="db.article">
+                        <face filter="TypeID in (250,129)" replace="true"> @Answer </face>
+                        <replace tagname="img">
+                            <div class="fcenter">
+                                <img src="[##cms.cms.cdn##]/@val2" alt="@title" />
+                            </div>
+                        </replace>
+                        <replace tagname="a">
+                            <a href="@val3"> @val2 </a>
+                        </replace>
+                        <replace tagname="italic">
+                            <i> @val2 </i>
+                        </replace>
+                        <replace tagname="bold">
+                            <b> @val2 </b>
+                        </replace>
                     </basis>
 
-                    
-                </ul>
+                    <div class="share">
+                        <h3>اشتراک گذاری</h3>
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/intent/tweet?text=[##cms.request.host##]&url=[##cms.request.rawurl##]"
+                                    title="twitter">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20ZM24 8H16C11.5817 8 8 11.5817 8 16V24C8 28.4183 11.5817 32 16 32H24C28.4183 32 32 28.4183 32 24V16C32 11.5817 28.4183 8 24 8Z"
+                                            fill="#FF9900" />
+                                        <path
+                                            d="M39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5C30.7696 0.5 39.5 9.23045 39.5 20ZM16 7.5C11.3056 7.5 7.5 11.3056 7.5 16V24C7.5 28.6944 11.3056 32.5 16 32.5H24C28.6944 32.5 32.5 28.6944 32.5 24V16C32.5 11.3056 28.6944 7.5 24 7.5H16Z"
+                                            stroke="#000C19" stroke-opacity="0.7" />
+                                        <path
+                                            d="M25 16.947C24.632 17.107 24.237 17.217 23.822 17.265C24.246 17.015 24.57 16.619 24.724 16.148C24.32 16.3835 23.8791 16.5491 23.42 16.638C23.2269 16.4356 22.9945 16.2746 22.7372 16.1649C22.4798 16.0552 22.2028 15.9991 21.923 16C20.79 16 19.872 16.905 19.872 18.02C19.872 18.178 19.89 18.332 19.925 18.48C19.1123 18.4414 18.3166 18.2339 17.5886 17.8706C16.8607 17.5073 16.2164 16.9962 15.697 16.37C15.5146 16.6771 15.4185 17.0278 15.419 17.385C15.419 18.085 15.782 18.705 16.332 19.066C16.0064 19.0558 15.6879 18.9691 15.402 18.813V18.838C15.4051 19.3075 15.5708 19.7613 15.8709 20.1224C16.171 20.4834 16.587 20.7292 17.048 20.818C16.7454 20.898 16.4287 20.9096 16.121 20.852C16.2551 21.2559 16.5117 21.608 16.855 21.8594C17.1984 22.1108 17.6115 22.2491 18.037 22.255C17.307 22.8176 16.4106 23.1215 15.489 23.119C15.324 23.119 15.161 23.109 15 23.091C15.9405 23.6863 17.031 24.0016 18.144 24C21.918 24 23.981 20.922 23.981 18.252L23.974 17.99C24.3763 17.7073 24.7239 17.3539 25 16.947Z"
+                                            fill="#000C19" fill-opacity="0.7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/pin/create/button/?description=[##cms.request.host##]&url=[##cms.request.rawurl##]"
+                                    title="pinterest">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.1101 21.9375C18.7726 23.5887 18.3623 25.1727 17.1393 26.0007C16.7635 23.5047 17.6939 21.6279 18.1254 19.6371C17.3895 18.4803 18.214 16.1499 19.7665 16.7247C21.679 17.4303 18.1121 21.0279 20.5077 21.4767C23.0065 21.9471 24.0283 17.4279 22.4771 15.9567C20.2377 13.8351 15.9561 15.9087 16.4829 18.9471C16.6113 19.6911 17.4332 19.9155 16.8111 20.9403C15.3777 20.6439 14.9502 19.5879 15.0045 18.1803C15.0932 15.8763 17.2214 14.2647 19.3576 14.0403C22.0575 13.7583 24.5908 14.9667 24.9415 17.3379C25.3346 20.0139 23.7225 22.9131 20.8346 22.7043C20.0537 22.6479 19.7229 22.2843 19.1101 21.9363V21.9375Z"
+                                            fill="#000C19" fill-opacity="0.7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20ZM24 8H16C11.5817 8 8 11.5817 8 16V24C8 28.4183 11.5817 32 16 32H24C28.4183 32 32 28.4183 32 24V16C32 11.5817 28.4183 8 24 8Z"
+                                            fill="#FF9900" />
+                                        <path
+                                            d="M39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5C30.7696 0.5 39.5 9.23045 39.5 20ZM16 7.5C11.3056 7.5 7.5 11.3056 7.5 16V24C7.5 28.6944 11.3056 32.5 16 32.5H24C28.6944 32.5 32.5 28.6944 32.5 24V16C32.5 11.3056 28.6944 7.5 24 7.5H16Z"
+                                            stroke="#000C19" stroke-opacity="0.7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]"
+                                    title="linkdin">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.8462 18.5V25.3571C15.8462 25.5276 15.7732 25.6912 15.6434 25.8117C15.5135 25.9323 15.3375 26 15.1538 26C14.9702 26 14.7941 25.9323 14.6643 25.8117C14.5345 25.6912 14.4615 25.5276 14.4615 25.3571V18.5C14.4615 18.3295 14.5345 18.166 14.6643 18.0454C14.7941 17.9249 14.9702 17.8571 15.1538 17.8571C15.3375 17.8571 15.5135 17.9249 15.6434 18.0454C15.7732 18.166 15.8462 18.3295 15.8462 18.5ZM15.1538 14C14.9256 14 14.7026 14.0628 14.5128 14.1806C14.3231 14.2983 14.1752 14.4656 14.0878 14.6614C14.0005 14.8572 13.9776 15.0726 14.0222 15.2805C14.0667 15.4883 14.1766 15.6792 14.338 15.829C14.4993 15.9789 14.7049 16.0809 14.9287 16.1223C15.1526 16.1636 15.3846 16.1424 15.5954 16.0613C15.8062 15.9802 15.9864 15.8429 16.1132 15.6667C16.24 15.4905 16.3077 15.2833 16.3077 15.0714C16.3077 14.7873 16.1861 14.5147 15.9697 14.3138C15.7534 14.1129 15.4599 14 15.1538 14ZM22.0769 17.8571C21.1467 17.8578 20.2471 18.1654 19.5385 18.725V18.5C19.5385 18.3295 19.4655 18.166 19.3357 18.0454C19.2059 17.9249 19.0298 17.8571 18.8462 17.8571C18.6625 17.8571 18.4865 17.9249 18.3566 18.0454C18.2268 18.166 18.1538 18.3295 18.1538 18.5V25.3571C18.1538 25.5276 18.2268 25.6912 18.3566 25.8117C18.4865 25.9323 18.6625 26 18.8462 26C19.0298 26 19.2059 25.9323 19.3357 25.8117C19.4655 25.6912 19.5385 25.5276 19.5385 25.3571V21.5C19.5385 20.8748 19.8059 20.2753 20.282 19.8332C20.758 19.3912 21.4037 19.1429 22.0769 19.1429C22.7502 19.1429 23.3958 19.3912 23.8719 19.8332C24.3479 20.2753 24.6154 20.8748 24.6154 21.5V25.3571C24.6154 25.5276 24.6883 25.6912 24.8182 25.8117C24.948 25.9323 25.1241 26 25.3077 26C25.4913 26 25.6674 25.9323 25.7972 25.8117C25.9271 25.6912 26 25.5276 26 25.3571V21.5C25.997 20.5347 25.5827 19.6098 24.8476 18.9272C24.1125 18.2447 23.1165 17.86 22.0769 17.8571Z"
+                                            fill="#000C19" fill-opacity="0.7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20ZM24 8H16C11.5817 8 8 11.5817 8 16V24C8 28.4183 11.5817 32 16 32H24C28.4183 32 32 28.4183 32 24V16C32 11.5817 28.4183 8 24 8Z"
+                                            fill="#FF9900" />
+                                        <path
+                                            d="M39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5C30.7696 0.5 39.5 9.23045 39.5 20ZM16 7.5C11.3056 7.5 7.5 11.3056 7.5 16V24C7.5 28.6944 11.3056 32.5 16 32.5H24C28.6944 32.5 32.5 28.6944 32.5 24V16C32.5 11.3056 28.6944 7.5 24 7.5H16Z"
+                                            stroke="#000C19" stroke-opacity="0.7" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]"
+                                    title="instagram">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 24.25C17.66 24.25 15.75 22.34 15.75 20C15.75 17.66 17.66 15.75 20 15.75C22.34 15.75 24.25 17.66 24.25 20C24.25 22.34 22.34 24.25 20 24.25ZM20 17.25C18.48 17.25 17.25 18.48 17.25 20C17.25 21.52 18.48 22.75 20 22.75C21.52 22.75 22.75 21.52 22.75 20C22.75 18.48 21.52 17.25 20 17.25Z"
+                                            fill="#000C19" fill-opacity="0.7" />
+                                        <path
+                                            d="M20 23.75C17.9361 23.75 16.25 22.0639 16.25 20C16.25 17.9361 17.9361 16.25 20 16.25C22.0639 16.25 23.75 17.9361 23.75 20C23.75 22.0639 22.0639 23.75 20 23.75ZM20 16.75C18.2039 16.75 16.75 18.2039 16.75 20C16.75 21.7961 18.2039 23.25 20 23.25C21.7961 23.25 23.25 21.7961 23.25 20C23.25 18.2039 21.7961 16.75 20 16.75Z"
+                                            stroke="#000C19" stroke-opacity="0.7" />
+                                        <path
+                                            d="M25 15.4999C24.87 15.4999 24.74 15.4699 24.62 15.4199C24.5 15.3699 24.39 15.2999 24.29 15.2099C24.2 15.1099 24.12 14.9999 24.07 14.8799C24.02 14.7599 24 14.6299 24 14.4999C24 14.3699 24.02 14.2399 24.07 14.1199C24.13 13.9899 24.2 13.8899 24.29 13.7899C24.34 13.7499 24.39 13.6999 24.44 13.6699C24.5 13.6299 24.56 13.5999 24.62 13.5799C24.68 13.5499 24.74 13.5299 24.81 13.5199C25.13 13.4499 25.47 13.5599 25.71 13.7899C25.8 13.8899 25.87 13.9899 25.92 14.1199C25.97 14.2399 26 14.3699 26 14.4999C26 14.6299 25.97 14.7599 25.92 14.8799C25.87 14.9999 25.8 15.1099 25.71 15.2099C25.61 15.2999 25.5 15.3699 25.38 15.4199C25.26 15.4699 25.13 15.4999 25 15.4999Z"
+                                            fill="#000C19" fill-opacity="0.7" />
+                                        <path
+                                            d="M24.6888 14.1071C24.6963 14.1007 24.701 14.0969 24.7039 14.0947L24.7075 14.0925L24.7174 14.0859C24.7454 14.0672 24.7657 14.0584 24.7781 14.0542L24.8118 14.043L24.8436 14.0271C24.8598 14.019 24.8684 14.0166 24.8807 14.0149L24.8989 14.0123L24.9168 14.0084C25.0531 13.9785 25.2207 14.0211 25.3515 14.1392C25.4051 14.2008 25.433 14.2465 25.4533 14.2994L25.4531 14.2995L25.4585 14.3122C25.4872 14.3811 25.5 14.4458 25.5 14.4999C25.5 14.5541 25.4872 14.6187 25.4585 14.6876C25.434 14.7463 25.4004 14.8021 25.3556 14.8555C25.3022 14.9003 25.2464 14.9339 25.1877 14.9584C25.1188 14.9871 25.0541 14.9999 25 14.9999C24.9459 14.9999 24.8812 14.9871 24.8123 14.9584C24.7532 14.9337 24.6971 14.8999 24.6434 14.8547C24.585 14.787 24.5499 14.7316 24.5315 14.6876C24.5125 14.642 24.5 14.5802 24.5 14.4999C24.5 14.424 24.5112 14.3646 24.5285 14.3198C24.5589 14.2559 24.5926 14.2048 24.6397 14.1494C24.6449 14.145 24.6497 14.1409 24.6541 14.1371C24.6604 14.1316 24.6654 14.1273 24.6698 14.1235C24.6768 14.1175 24.6822 14.1128 24.6888 14.1071Z"
+                                            stroke="#000C19" stroke-opacity="0.7" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20ZM24 8H16C11.5817 8 8 11.5817 8 16V24C8 28.4183 11.5817 32 16 32H24C28.4183 32 32 28.4183 32 24V16C32 11.5817 28.4183 8 24 8Z"
+                                            fill="#FF9900" />
+                                        <path
+                                            d="M39.5 20C39.5 30.7696 30.7696 39.5 20 39.5C9.23045 39.5 0.5 30.7696 0.5 20C0.5 9.23045 9.23045 0.5 20 0.5C30.7696 0.5 39.5 9.23045 39.5 20ZM16 7.5C11.3056 7.5 7.5 11.3056 7.5 16V24C7.5 28.6944 11.3056 32.5 16 32.5H24C28.6944 32.5 32.5 28.6944 32.5 24V16C32.5 11.3056 28.6944 7.5 24 7.5H16Z"
+                                            stroke="#000C19" stroke-opacity="0.7" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section10">
+                        <basis core="dbsource" source="userbehavior" name="db" title="{##db.senduserName.value##}"
+                            run="atclient" triggers="db.sendcomment" if="{##db.sendcomment##}" parentid="0"
+                            usedforid="[##cms.query.id##]" userid="100005" mid="1" comment="{##db.sendcomment.value##}">
+                            <member request="comment" type="scalar" name="comment" preview="true" />
+                        </basis>
+                        <div class="productsTitle">
+                            <p>ثبت نظر</p>
+                        </div>
+        
+                        <form action="" class="commentP">
+                            <div class="userInfo">
+                                <input class="userName" type="text" placeholder="نام و نام خانوادگی" />
+                                <input type="email" placeholder="لطفا ایمیل خود را وارد کنید" />
+                            </div>
+                            <div class="msg">
+                                <_textarea class="msg _textarea" name="message" id="message" placeholder="پیام شما"></_textarea>
+                            </div>
+                            <div class="messageSend">
+                                <p></p>
+                            </div>
+                            <button class="submitComment">ارسال نظر</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-                    <basis core="print" datamembername="db.aboutus">
-                        <layout>
-                            <div class="para text-sm text-justify text-dark font-Ravi400 mb-14">
-  
-                                @child
-                            </div>
-                        </layout>
-  
-                        <face filter="TypeID=144">
-                            @Answer
-                        </face>
-                    </basis>
-                    <basis core="group" if="'[##db.pdf.RowNumber##]' <> '' "> 
-                        <div class="catalouge">
-                            <h3 class="font-Ravi500 text-base text-dark mb-10">
-                                کاتالوگ پروژه
-                            </h3>
-    
-                            <div class="imgS mb-5">
-                                <basis core="print" datamembername="db.image">
-                                 
-                                    <face filter="ord=10">
-                                        
-                                        <img src="/@largeIMG" alt="@name">
-                                    </face>
-                                </basis>
-                            </div>
-                            <basis core="print" datamembername="db.pdf">
-                              
-                                <face>
-                                    
-                                    <a class="flex mx-auto w-fit gap-x-2 items-center py-1.5 px-2 bg-main rounded-[5px]" href="/@largeIMG"
-                                        download="/@largeIMG" title="دانلود کاتالوگ">
-                                        <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M1 6.64114V7.92857C1 8.08012 1.0602 8.22547 1.16737 8.33263C1.27453 8.4398 1.41988 8.5 1.57143 8.5H8.42857C8.58012 8.5 8.72547 8.4398 8.83263 8.33263C8.9398 8.22547 9 8.08012 9 7.92857V6.64114M5 5.5V0.5M3 4L5 6L7 4"
-                                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-            
-            
-                                        <span class="font-Ravi400 text-xs text-white">
-                                            دانلود کاتالوگ
-                                        </span>
-                                    </a>
-                                </face>
-                            </basis>
+        
+     
+            <div class="section3">
+                <div class="sliderSection">
+                    <basis core="group" if="'[##db.relatedblog.RowNumber##]' <> '' or '[##db.relatedblogNull.RowNumber##]' <> ''">
+                        <div class="productsTitle">
+                            <p>مقالات</p>
                         </div>
                         
+                        <div class="swiper blogSlider" dir="rtl">
+                                    <!-- Additional required wrapper -->
+    
+                                    <!-- Slides -->
+                                    <div class="swiper-wrapper">
                     </basis>
+                    
+                    <basis core="print" datamembername="db.relatedblog">
+                        <layout>
+
+                        
+                                    
+                                    
+                                    
+                                    @child
+                                
+                                
+                           
+                        </layout>
+                        <face filter="image not in (null)">
+                            <div class="swiper-slide">
+                                <div class="innerSlider">
+                                    <a href="/@link" title="@title">
+                                        <div class="imgS">
+                                            <img src="/@00220X00269prp" alt="@title" title="@title" loading="lazy" />
+                                        </div>
+                                    </a>
+                                    <div class="data">
+                                        <span> @date </span>
+                                        <p>مقاله</p>
+                                    </div>
+                                    <h3>@title</h3>
+                                </div>
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.relatedblogNull">
+                        <layout>
+
+                        
+                                    
+                                    
+                                    
+                                    @child
+                                
+                                
+                           
+                        </layout>
+                        <face>
+                            <div class="swiper-slide">
+                                <div class="innerSlider">
+                                    <a href="/@link" title="@title">
+                                        <div class="imgS">
+                                            <img src="/images/default-blog.jpg" alt="@title" title="@title" loading="lazy" />
+                                        </div>
+                                    </a>
+                                    <div class="data">
+                                        <span> @date </span>
+                                        <p>مقاله</p>
+                                    </div>
+                                    <h3>@title</h3>
+                                </div>
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="group" if="'[##db.relatedblog.RowNumber##]' <> '' or '[##db.relatedblogNull.RowNumber##]' <> ''">
+
+                                </div>
+                                <!-- If we need scrollbar -->
+                            </div>
+                            <div class="sliderDatas">
+                                <div class="swiper-scrollbar blogSliderSCrollbar"></div>
+                                <div class="btns">
+                                    <div class="nextBtn">
+                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.97505 5.99922C6.97505 6.13255 6.95005 6.26155 6.90005 6.38622C6.85005 6.51155 6.78338 6.61589 6.70005 6.69922L2.10005 11.2992C1.91672 11.4826 1.68338 11.5742 1.40005 11.5742C1.11671 11.5742 0.883382 11.4826 0.700048 11.2992C0.516715 11.1159 0.425049 10.8826 0.425049 10.5992C0.425049 10.3159 0.516715 10.0826 0.700048 9.89922L4.60005 5.99922L0.700049 2.09922C0.516715 1.91589 0.425049 1.68255 0.425049 1.39922C0.425049 1.11588 0.516715 0.882553 0.700049 0.69922C0.883382 0.515886 1.11672 0.424218 1.40005 0.424218C1.68338 0.424218 1.91672 0.515886 2.10005 0.69922L6.70005 5.29922C6.80005 5.39922 6.87072 5.50755 6.91205 5.62422C6.95405 5.74089 6.97505 5.86589 6.97505 5.99922Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="prevBtn">
+                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.0249509 5.99922C0.0249509 6.13255 0.0499515 6.26155 0.0999517 6.38622C0.149952 6.51155 0.216618 6.61589 0.299951 6.69922L4.89995 11.2992C5.08328 11.4826 5.31662 11.5742 5.59995 11.5742C5.88329 11.5742 6.11662 11.4826 6.29995 11.2992C6.48328 11.1159 6.57495 10.8826 6.57495 10.5992C6.57495 10.3159 6.48328 10.0826 6.29995 9.89922L2.39995 5.99922L6.29995 2.09922C6.48328 1.91589 6.57495 1.68255 6.57495 1.39922C6.57495 1.11588 6.48328 0.882553 6.29995 0.69922C6.11662 0.515886 5.88328 0.424218 5.59995 0.424218C5.31662 0.424218 5.08328 0.515886 4.89995 0.69922L0.299951 5.29922C0.199952 5.39922 0.129285 5.50755 0.0879516 5.62422C0.0459518 5.74089 0.0249509 5.86589 0.0249509 5.99922Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            </basis>
                 </div>
             </div>
         </div>
-  
-        <basis core="print" datamembername="db.join">
-            <layout>
-                <div class="bottomSection h-svh overflow-hidden flex gap-x-20" style="margin-top: 240px;">
-                    @child
-                </div>
-            </layout>
-       
-            <face>
-                <div class="rSide w-[66%] relative">
-                    <div class="imgS">
-                        <a href="/@db.relatedproject.link" title="@db.relatedproject.title">
-    
-                            <img class="w-full" src="/@db.relatedproject.00857X00749prp" alt="@db.relatedproject.title">
-                        </a>
-                    </div>
-                    <a href="/@db.relatedproject.link" title="@db.relatedproject.title"
-                        class="absolute flex items-center justify-center after:bg-gradient-to-t after:backdrop-blur-sm after:from-dark after:to-dark/[0] bottom-0 left-0 right-0 h-24 after:absolute after:w-full after:h-full after:inset-0">
-                        <h5 class="text-center relative z-1 text-white font-Ravi500 text-xl">
-                            @db.relatedproject.title
-                        </h5>
-    
-                    </a>
-                </div>
-                <div class="lSide flex flex-col justify-between pl-[5%] w-[27%] relative" style="z-index: 10;">
-    
-                    <div class="infoT">
-                        <h3 class="mb-5 font-Ravi500 text-lg text-dark">
-                            پروژه‌ی بعد
-                        </h3>
-                        <div class="proTitle justify-between flex mb-2.5">
-                            <a href="/@db.relatedproject.link" title="@db.relatedproject.title">
-    
-                                <h2 class="font-Ravi500 text-base text-dark">
-                                    @db.relatedproject.title
-                                </h2>
-                            </a>
-                            <a title="@db.relatedproject.title" href="/@db.relatedproject.link">
-                                <h4 class="font-Ravi500 text-base text-dark">
-                                    @db.relatedprojecten.title
-                                </h4>
-    
-                            </a>
-                        </div>
-                        <div class="para font-Ravi400 text-sm text-justify text-dark">
-                            <p>
-                               @db.relatedproject.substr
-                            </p>
-                        </div>
-    
-                    </div>
-    
-                    <a class="flex mb-7 items-center gap-x-2 py-1.5 px-2 bg-main rounded-[5px] text-white w-fit" href="/@db.relatedproject.link"
-                        title="پروژه‌ی بعد">
-                        <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.5 4.5L9 4.5M3 2.5L1 4.5L3 6.5" stroke="white" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-    
-                        <span class="font-Ravi400 text-sm">
-                            پروژه‌ی بعد
-                        </span>
-                    </a>
-                </div>
-                
-            </face>
-        </basis>
-            
-     
     </div>
-  
-  
+    <basis core="call" file="formEstelam.inc" />
+    <basis core="call" file="newscripts.inc" />
+
+    <basis core="call" file="newFooter.inc" />
+    <script src="[##cms.cms.cdn##]/newDesign/js/newFooter.js"></script>
+
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.6.min.js"></script>
+    <script src="[##cms.cms.cdn##]/newDesign/js/newBlogShow.js"></script>
     <script>
-        let header=document.querySelector("header");header.classList.add("dark"),header.classList.add("darkLogo");
+
+
+
+
+       document.querySelector('.submitComment').addEventListener('click',(event)=>{
+     //  let input1  = document.querySelector('.namee')
+     event.preventDefault();
+      let textar = document.querySelectorAll('.userInfo input')
+      let emptyFlag=false;
+      textar.forEach(element => {
+         if (element.value == "") {
+             emptyFlag=true
+         }
+      });
+     if(!emptyFlag){
+         
+         let val = document.querySelector(".commentP _textarea").value;
+         let userName = document.querySelector(".commentP .userName").value;
+         console.log("val" , val);
+         $bc.setSource('db.send',true)
+          $bc.setSource('db.senduserName',userName)
+          $bc.setSource('db.sendcomment',val)
+          $bc.setSource('db.run',true)
+          let sendbox = document.querySelector('.messageSend')
+             let text = sendbox.querySelector('p')
+             text.innerHTML = 'درخواست شما با موفقیت ثبت شد'
+    $(".messageSend").css("display","block")
+    
+    document.querySelector(".commentP").reset();
+    setTimeout(()=>{
+        $(".messageSend").css("display","none")
+  },3500)
+     }
+     else{
+         let sendbox = document.querySelector('.messageSend')
+             let text = sendbox.querySelector('p')
+             text.innerHTML = 'فیلدهای الزامی را پر کنید'
+             $(".messageSend").css("display","block")
+    
+    setTimeout(()=>{
+        $(".messageSend").css("display","none")
+  },3500)
+
+     }
+    
+      
+ })
+
+
+
+
+   </script>
+    <script type="application/ld+json">
+      [##json.fq.column1##]
     </script>
-  
-  
-  
-  <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.4.0.js"></script>
-  <script src="[##cms.cms.cdn##]/_js/gsap.js"></script>
-  <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
-  <script src="[##cms.cms.cdn##]/_js/lenisScroll.js"></script>
-  
-    <script src="[##cms.cms.cdn##]/js/scroll.js"></script>
-  
-    <script src="[##cms.cms.cdn##]/_js/smooth-scrollbar.js"></script>
-    <script src="[##cms.cms.cdn##]/_js/imageLoaded.js"></script>
-    <script src="[##cms.cms.cdn##]/js/project.js"></script>
-    <script type="application/ld+json"> 
-        [##json.fq.column1##] 
-        </script>
-  </body>
-  
-  </html>
+</body>
+
+</html>

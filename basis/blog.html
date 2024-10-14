@@ -1,0 +1,80 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210221"> <member name="blog" type="list" size="387x289" propertyid="7244,7249" postsql=" select *, SUBSTR(prp_7244, 1,200-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 200)))) || '...' as substr from [db.blog]"/> </basis>	
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقالات</title>
+   
+            <meta name="description" content="مقالات دیکا آسیا" />
+       
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
+</head>
+
+<body>
+    <div class="blog bg-bgGray flex flex-col justify-between" style="min-height: 100vh;">
+        <basis core="call" file="header.inc" />
+        <div class="inner">
+
+            <section class="section1 pt-44 mb-12">
+                <h1 class="font-YekanBakh700 text-2xl text-blackTxt  w-90p mx-auto">
+                    مقاله‌ها
+                </h1>
+            </section>
+            <section class="section2 pb-14">
+                <div class="grid grid-cols-3 gap-x-5 gap-y-8 w-90p mx-auto">
+                    <basis core="print" datamembername="db.blog">
+                       
+                        <else-layout>
+                                <div class="para font-YekanBakh400 text-base">
+                                    <p>
+                                        متاسفانه مقاله‌ای موجود نیست.
+                                    </p>
+                                </div>
+                        </else-layout>
+                        <face>
+                            <div class="blogbox">
+                                <div class="imgS">
+                                    <a href="/@link" title="@title">
+                                        <img class="w-full" src="/@00387X00289prp" alt="@title"
+                                            title="@title">
+                                    </a>
+                                </div>
+                                <div class="title my-4 flex items-center justify-between">
+                                    <h2 class="font-YekanBakh700 text-lg text-blackTxt">
+                                       @title
+                                    </h2>
+                                    <p class="font-YekanBakh400 text-base text-blackTxt">
+                                          تاریخ:
+                                          <span class="font-YekanBakh400 text-sm text-blackTxt mr-2">
+                  
+                                           @prp_7249
+                  
+                                            
+                                          </span>
+                                    </p>
+                                </div>
+                                <div class="para font-YekanBakh400 text-sm text-blackTxt text-right">
+                                    <p>
+                                        @substr
+                                        </p>
+                                </div>
+                            </div>
+                            
+                        </face>
+                    </basis>
+                 
+                </div>
+            </section>
+        </div>
+        <basis core="call" file="footer.inc" />
+
+    </div>
+
+    <basis core="call" file="script.inc" />
+</body>
+
+</html>

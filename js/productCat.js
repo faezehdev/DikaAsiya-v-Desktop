@@ -1,4 +1,4 @@
-let section3 = document.querySelectorAll(".section3");
+let snapSection = document.querySelectorAll(".snapSection");
 $(function () {
   fullpage();
 });
@@ -11,12 +11,12 @@ function fullpage() {
     //scrollOverflow:true,
     // fitToSection: false,
     afterLoad: function (origin, destination, direction, trigger) {
-      $(".section3").removeClass("activeSection");
+      $(".snapSection").removeClass("activeSection");
       if (destination.index>0) {
       
           console.log(destination.index);
-          console.log(section3[destination.index-1]);
-          section3[destination.index-1].classList.add("activeSection")
+          console.log(snapSection[destination.index-1]);
+          snapSection[destination.index-1].classList.add("activeSection")
       }
     },
   });
