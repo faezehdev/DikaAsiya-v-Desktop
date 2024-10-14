@@ -1,0 +1,1 @@
+header.classList.add("activeHeader"),window.addEventListener("scroll",(function(){0==(window.pageYOffset||document.documentElement.scrollTop)&&$("header").addClass("activeHeader")}));let videos=document.querySelectorAll(".VideoList .Video");videos.forEach((e=>{gsap.to(e,{opacity:1,scrollTrigger:{trigger:e,start:"top 50%",end:"bottom bottom",stagger:.3}})}));

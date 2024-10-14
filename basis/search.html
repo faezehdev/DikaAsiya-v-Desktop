@@ -1,0 +1,141 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="210200" q="[##cms.query.q##]">
+    <member name="productlist" size="976x409" type="list" propertyid="7244,7246,7248"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210215" q="[##cms.query.q##]"> 
+   <member name="projectList" type="list" size="584x438" request="catname" propertyid="7244,7246,7248"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="210221" q="[##cms.query.q##]">
+    <member name="blog" type="list" size="387x289" propertyid="7244,7246,7248"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جستجو</title>
+    <meta name="description" content="جستجو">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputDesk.css">
+</head>
+<body class=" bg-bgGray">
+    <main class="Search-C overflow-hidden h-screen " dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class=" w-full flex overflow-auto mt-[10em]" id="Search">
+           <div class="SearchContainer w-90p mx-auto h-[75vh] flex overflow-y-scroll flex-col">
+            <basis core="group" if="'[##db.productlist.RowNumber##]' = '' and
+            '[##db.projectList.RowNumber##]' = '' and '[##db.blog.RowNumber##]' = ''"> 
+
+            <div class="NoRes relative w-full  mx-auto flex flex-col gap-2">
+                <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="Current w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                        جست و جو بی نتیجه ماند!
+                    </h1>
+                </div>
+                <p class="font-YekanBakh400 text-base font-normal leading-28 text-blackTxt">
+                    املای کلمه‌ی مورد نظر را بررسی کرده و مجددا برای جست و جو اقدام کنید.
+                </p>
+                </div>
+            </basis>
+            <basis core="print" datamembername="db.productlist">
+                <layout>
+                    <div class="Products w-full flex flex-col">
+                        <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                            <h1 class="Current gap-[.2em] w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                                نتایج جست و جو در 
+                                <span class="w-auto flex justify-start items-start color font-YekanBakh700 font-bold text-xl leading-35 text-punch600">
+                                    محصولات
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="Products w-full flex flex-col gap-4 py-[1.5em]">
+                    @child
+                        </div>
+                    </div>
+                </layout>
+                <face>
+                    <a href="@link" title="@title" alt="@title" class="Product w-auto flex flex-col gap-2">
+                        <div class="title w-auto flex justify-start items-start">
+                            <h2 class="font-YekanBakh700 font-bold text-lg leading-32 text-blackTxt">
+                             @title
+                            </h2>
+                        </div>
+                        <!-- <div class="det w-auto flex justify-start items-start flex-col">
+                            <p class="font-YekanBakh400 font-normal text-base leading-32 text-blackTxt">
+                                یک خط توضیح که باید اینجا در مورد عنوان نوشته شود.
+                            </p>
+                        </div> -->
+                    </a>
+                </face>
+            </basis>
+      <basis core="print" datamembername="db.projectList">
+          <layout>
+            <div class="projects w-full flex flex-col">
+                <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="Current gap-[.2em] w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                        نتایج جست و جو در 
+                        <span class="w-auto flex justify-start items-start color font-YekanBakh700 font-bold text-xl leading-35 text-punch600">
+                            پروژه‌ها
+                        </span>
+                    </h1>
+                </div>
+                <div class="Projects w-full flex flex-col gap-4 py-[1.5em]">
+              @child
+                </div>
+            </div>
+          </layout>
+          <face>
+            <a href="@link" alt="@title" title="@title" class="Project w-auto flex flex-col gap-2">
+                <div class="title w-auto flex justify-start items-start">
+                    <h2 class="font-YekanBakh700 font-bold text-lg leading-32 text-blackTxt">
+                       @title
+                    </h2>
+                </div>
+                <!-- <div class="det w-auto flex justify-start items-start flex-col">
+                    <p class="font-YekanBakh400 font-normal text-base leading-32 text-blackTxt">
+                        یک خط توضیح که باید اینجا در مورد عنوان نوشته شود.
+                    </p>
+                </div> -->
+            </a>
+          </face>
+      </basis>
+         <basis core="print" datamembername="db.blog">
+             <layout>
+                <div class="blogs w-full flex flex-col">
+                    <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                        <h1 class="Current gap-[.2em] w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                            نتایج جست و جو در 
+                            <span class="w-auto flex justify-start items-start color font-YekanBakh700 font-bold text-xl leading-35 text-punch600">
+                                مقاله‌ها
+                            </span>
+                        </h1>
+                    </div>
+                    <div class="blogs w-full flex flex-col gap-4 py-[1.5em]">
+                 @child
+                    </div>
+                </div>
+             </layout>
+             <face>
+                <a href="@link" alt="@title" title="@title"  class="Blog w-auto flex flex-col gap-2">
+                    <div class="title w-auto flex justify-start items-start">
+                        <h2 class="font-YekanBakh700 font-bold text-lg leading-32 text-blackTxt">
+                           @title
+                        </h2>
+                    </div>
+                    <!-- <div class="det w-auto flex justify-start items-start flex-col">
+                        <p class="font-YekanBakh400 font-normal text-base leading-32 text-blackTxt">
+                            یک خط توضیح که باید اینجا در مورد عنوان نوشته شود.
+                        </p>
+                    </div> -->
+                </a>
+             </face>
+         </basis>
+           </div>
+        </section>
+    </main>
+<script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.4.0.js"></script>
+<script src="[##cms.cms.cdn##]/_js/gsap.js"></script>
+<script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+<script src="[##cms.cms.cdn##]/_js/lenisScroll.js"></script>
+<script src="[##cms.cms.cdn##]/js/search.js"></script>
+</body>
+</html>

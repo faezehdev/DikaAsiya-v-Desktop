@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ویدیو‌ها</title>
+    <meta name="description" content="ویدیو‌ها">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputDesk.css">
+</head>
+<body class=" bg-bgGray">
+    <main class="Video-Show overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full flex mt-[10em] mb-[5em]">
+            <div class="video-C w-full flex flex-col gap-4">
+                <div class="Title  w-90p mx-auto flex flex-col justify-start items-center gap-5 py-[.8em]">
+                    <h1 class="Current w-auto flex justify-start items-start font-YekanBakh700 font-bold text-[32px] leading-55 text-blackTxt">
+                        نام ویدئو
+                    </h1>
+                    <p class="font-YekanBakh400 font-normal text-xl leading-35 text-blackTxt">
+                        یک خط توضیح که باید اینجا در مورد عنوان نوشته شود.
+                    </p>
+                </div>
+              <div class="VideoShow mt-[1em] mb-[2em] w-full flexjustify-start items-center">
+                <div class="VideoBox group  w-full flex justify-center items-center h-full">
+                    <div class="Video w-full flex justify-center items-center relative hover:cursor-pointer
+                    overflow-hidden flex-col duration-[.5s]">
+                        <video class="w-full h-full object-cover" src=""
+                        poster="/images/1.webp"></video>
+                        <div class="ov w-full h-full absolute flex justify-center items-center
+                        top-0 left-0 z-3 group-[&.toggle]:opacity-0 group-[&.toggle]:left-[-100%] duration-[.5s]">
+                            <div class="play mt-[10em]">
+                                <svg width="33" height="48" viewBox="0 0 33 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29.5635 18.878L0.333008 0V48L29.5516 29.054C30.4021 28.5132 31.1033 27.7632 31.5897 26.8741C32.0761 25.9849 32.3318 24.9855 32.333 23.9693C32.3342 22.9531 32.0808 21.9531 31.5965 21.0628C31.1122 20.1725 30.4127 19.4208 29.5635 18.878ZM27.4283 25.668L4.33301 40.668V7.316L27.4421 22.264C27.7275 22.4446 27.9626 22.6958 28.1251 22.994C28.2876 23.2922 28.3722 23.6274 28.3708 23.9679C28.3694 24.3084 28.2821 24.6429 28.1172 24.9397C27.9522 25.2365 27.7151 25.4858 27.4283 25.664V25.668Z" fill="#F6F6F6"/>
+                                    </svg>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>      
+              </div>
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/video.js"></script>
+</body>
+</html>

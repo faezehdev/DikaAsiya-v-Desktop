@@ -1,0 +1,58 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+    <member request="cat" type="tree" name="productCat" parentid="210198" /> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات</title>
+    <meta name="description" content="محصولات">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputDesk.css">
+</head>
+<body class=" bg-bgGray">
+    <main class="ProductCat-C" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full flex mt-[10em]">
+            <div class="Products-C w-90p mx-auto flex flex-col gap-4">
+                <div class="Title w-full flex justify-start border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        دسته‌بندی 
+                        <span class="color font-YekanBakh700 font-bold text-2xl leading-41 text-punch600">
+                            محصولات
+                        </span>
+                    </h1>
+                </div>
+                <div class="ProductCats flex-col w-full flex justify-center items-center mt-[1.5em] mb-[5em]">
+                    <basis core="print" datamembername="db.productCat">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="parentid in (210198)">
+                            <a href="@link"  alt="@title" title="@title" class="ProCat group/proCat overflow-hidden w-full before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
+                            before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
+                             w-full relative flex justify-center items-center">
+                              <div class="IMG flex w-full h-full overflow-hidden">
+                                <img src="@image" alt="@title" title="@title" class="w-full 
+                                group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
+                              </div>
+                              <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
+                                <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
+                                    <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
+                                       @link
+                                    </h2>
+                                </div>
+                              </div>
+                            </a>
+                        </face>
+                    </basis>
+                </div>
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/productCat.js"></script>
+</body>
+</html>

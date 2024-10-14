@@ -485,3 +485,27 @@ color: #1C1C1C!important;
    }
 
 
+main.Home .Banner-Slider .Text p{
+font-size: 20px;
+font-weight: 400;
+line-height: 35px;
+color: #F6F6F6;
+}
+main.Home .Banner-Slider .OV,
+main.ProductCat-C .OV {
+background-color: #1C1C1C80;
+}
+main.Home .Section-2 .Middle{
+  width: 90%;
+  margin: 0 auto;
+}
+main.Home .Section-2 .Middle .Text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  color:#1C1C1C;
+  text-align: center;
+}
+.Parallax-Container{
+  align-items: center;
+}

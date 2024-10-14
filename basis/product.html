@@ -1,0 +1,288 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" usedforid="[##cms.query.id##]" > 
+    <member request="navigationcat" type="tree" name="nav" postsql="select * from [db.nav] where Parentid=210198" />
+ </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
+    <member name="product" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]" run="atclient"> 
+    <member name="schema" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
+    <member name="title" type="view" postsql="select * from [db.title] where TypeID=150"/> 
+</basis>
+ <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="[##cms.query.id##]"> 
+    <member name="image-product" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
+    <member type="list" name="related-product" size="387x289" blgid="18" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" usedforid="[##cms.query.id##]"> 
+    <member type="list" name="related-project" size="373x289" blgid="1527" />
+ </basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="fq" />
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputDesk.css">
+    <script src="https://cdn.basiscore.net/academy.basiscore.com/_js/basiscore-2.23.1.min.js"></script>
+    <script src="https://cdn.basiscore.net/basispanel.ir/_js/alasql.min.js"></script>
+</head>
+<body class=" bg-bgGray">
+    <main class="Product-Show overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full flex mt-[10em] mb-[2em]">
+            <div class="AboutPro-C w-90p mx-auto grid grid-cols-[60%,40%] gap-7">
+                <div class="RightPro w-full flex flex-col justify-start items-start">
+                    <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                        <h1 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke400">
+                            دسته‌بندی 
+                                محصولات
+                           
+                        </h1>
+                        <span class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                            >
+                        </span>
+                        <basis core="print" datamembername="db.nav">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="RowNumber=3">
+                                <a href="@link" title=" @title" alt="@title"
+                                class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke400">
+                                  @title
+                                </a>
+                            </face>
+                        </basis>
+                     
+                        <span class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                            >
+                        </span>
+                        <span class="proName w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                            [##db.title.Answer##]
+                        </span>
+                    </div>
+                    <div class="ProGallery relative w-full flex justify-center flex-col mt-[1em]">
+                        <div class="swiper-Gallery h-[60vh] w-full flex">
+                            <div class="swiper-wrapper h-full w-full">
+                                <basis core="print" datamembername="db.image-product">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="ord=1000">
+                                        <div class="swiper-slide h-full w-full flex justify-center items-center">
+                                            <div class="IMG w-full h-full flex justify-center items-center">
+                                                <img src="@largeIMG" alt="[##db.title.Answer##]" title="[##db.title.Answer##]"
+                                                 class="h-full w-full object-cover">
+                                            </div>
+                                        </div>
+                                    </face>
+                                </basis>                                                                                   
+                            </div>
+                        </div>
+                        <div class="Navigation mt-[1.5em] w-full flex justify-center items-center">
+                            <div class="swiper-button-next w-[20px] h-[20px] flex justify-center items-center">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.34258 11.345L0.166748 10.1667L4.57424 5.75585L0.166748 1.34502L1.34591 0.166687L5.75007 4.57752C6.06252 4.89007 6.23805 5.31391 6.23805 5.75585C6.23805 6.19779 6.06252 6.62164 5.75007 6.93419L1.34258 11.345Z" fill="#888888"/>
+                                    </svg>
+                                    
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev  w-[20px] h-[20px] flex justify-center items-center">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.06556 11.345L0.654726 6.93419C0.342274 6.62164 0.166748 6.19779 0.166748 5.75585C0.166748 5.31391 0.342274 4.89007 0.654726 4.57752L5.06556 0.166687L6.24389 1.34502L1.83639 5.75585L6.24723 10.1667L5.06556 11.345Z" fill="#888888"/>
+                                    </svg>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="LeftPro mt-[.4em] w-full flex flex-col justify-start items-start gap-4">
+                    <div class="Description w-full flex flex-col justify-start items-start">
+                        <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                            <h2 class="font-YekanBakh700 font-bold text-xl leading-35 text-blackTxt">
+                                توضیحات
+                            </h2>
+                        </div> 
+                        <div class="Text mt-[1em] w-full flex flex-col justify-start items-start">
+                            <basis core="print" datamembername="db.product">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID=144">
+                                    <p class="font-YekanBakh400 font-normal text-base leading-28 text-blackTxt">
+                                        @Answer
+                                      </p>
+                                </face>
+                            </basis>
+                        
+                        </div>
+                    </div>
+                  <div class="Tab-Container w-full flex flex-col justify-start items-start gap-6 mt-[1.2em]">
+                    <div class="Tab-Title border-b-[1px] border-Woodsmoke400 py-[.8em] w-full flex justify-start items-start gap-[1.5em]">
+                        <span class="Tab-Item hover:cursor-pointer pt-[.5em]
+                        group/tab w-auto relative flex justify-start items-start "
+                        bc-triggers="click" id="tab-1" >
+                            <span class="Line w-0 group-hover/tab:w-full group-[&.active]/tab:w-full duration-700
+                             h-[2px] bg-punch600 absolute right-0 top-0"></span>
+                            <span class="Tit duration-100 group-hover/tab:text-blackTxt group-[&.active]/tab:text-blackTxt w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke400">
+                                ویژگی‌ها
+                            </span>
+                            
+                        </span>
+                        <!-- <span class="Tab-Item group/tab hover:cursor-pointer  pt-[.5em]
+                        w-auto relative flex justify-start items-start "
+                        bc-triggers="click" id="tab-2">
+                        <span class="Line w-0 group-hover/tab:w-full group-[&.active]/tab:w-full duration-700
+                             h-[2px] bg-punch600 absolute right-0 top-0"></span>
+                            <span class="Tit duration-100 group-hover/tab:text-blackTxt group-[&.active]/tab:text-blackTxt w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke400">
+                                ویژگی‌ها
+                            </span>
+                            
+                            
+                        </span> -->
+                    </div>
+                    <div class="Tab-Desc w-full flex justify-start items-start">
+
+                    <basis core="group" if="{##db.btn1.value|(true)##}" run="atclient" triggers="db.btn1">
+
+                        <div class="Tab-1 Tab w-full flex flex-col justify-start items-start">
+                            <basis core="print" datamembername="db.schema" run="atclient">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="TypeID not in (150,146,144,159,160,161,162)">
+                            <div class="row w-full flex justify-start items-start gap-4">
+                                <span class="Question w-auto flex text-lg leading-32 text-blackTxt
+                                justify-center items-center font-YekanBakh700 font-bold">
+                                @Question@:
+                                </span>
+                                <span class="Answer w-auto font-normal flex text-base leading-28 text-blackTxt
+                                justify-center items-center font-YekanBakh700 ">
+                                @Answer@
+                                </span>
+                            </div>
+                                </face>
+                            </basis>
+                            
+                    </div>
+
+                    </basis>
+             
+
+                    <!-- <basis core="group" if="{##db.btn2.value|(false)##}" run="atclient" triggers="db.btn2">
+
+                        <div class="Tab-2 Tab w-full flex flex-col justify-start items-start">
+                            <div class="Text  w-full flex flex-col justify-start items-start">
+                                <p class="text-base leading-28 text-blackTxt
+                               font-YekanBakh700">
+                                    تست 2
+                                </p>
+                            </div>
+                        </div>
+
+                    </basis> -->
+
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+        </section>
+        <basis core="print" datamembername="db.related-product">
+            <layout>
+                <section class="Section-2 w-full flex flex-col">
+                    <div class="Title w-90p mx-auto
+                     flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                        <h2 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                            محصولات مرتبط
+                        </h2>
+                    </div>
+                    <div class="Related-Pro w-90p mx-auto flex justify-center items-center">
+                        <div class="swiper-RelatedProduct w-full overflow-hidden flex py-[2em]">
+                            <div class="swiper-wrapper w-full">
+                @child
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </layout>
+            <face>
+                <div class="swiper-slide w-full flex justify-center items-center">
+                    <a href="@link" alt="@title" title="@title" class="Product group/product h-full relative w-full flex justify-center items-center">
+                        <div class="IMG overflow-hidden w-full h-full flex justify-center items-center">
+                            <img src="@00387X00289prp" alt="@title" title="@title" class="w-full 
+                            group-hover/product:scale-[1.2] duration-[.5s] object-cover h-full">
+                        </div>
+                        <div class="OV absolute flex justify-end items-center
+                         left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                         <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                           @title
+                         </h2>
+                        </div>
+                     </a>
+                </div>
+            </face>
+        </basis>
+ <basis core="print" datamembername="db.related-project">
+     <layout>
+        <section class="Section-3 w-full flex flex-col mb-[2em]">
+            <div class="Title w-90p mx-auto
+             flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                <h2 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                    پروژه‌های مرتبط
+                </h2>
+            </div>
+            <div class="Related-Pro w-90p mx-auto flex justify-center items-center">
+                <div class="swiper-RelatedProject w-full overflow-hidden flex py-[2em]">
+                    <div class="swiper-wrapper w-full">
+         @child
+                    </div>
+                </div>
+            </div>
+        </section>
+     </layout>
+     <face>
+        <div class="swiper-slide w-full flex justify-center items-center">
+            <a href="@link"  alt="@title" title="@title" class="Project group/project h-full relative w-full flex justify-center items-center">
+                <div class="IMG overflow-hidden w-full h-full flex justify-center items-center">
+                    <img src="@00373X00289prp" alt="@title" title="@title" class="w-full 
+                    group-hover/project:scale-[1.2] duration-[.5s] object-cover h-full">
+                </div>
+                <div class="OV absolute flex justify-center items-end
+                 left-0 top-0 z-2 w-full h-full">
+                 <div class="Box  relative w-90p h-[40%] mx-auto flex flex-col justify-center items-center
+                  bg-[#1C1C1C80] border-Woodsmoke/50 border-[1px]">
+                    <span class="Proj py-[.3em] px-[.5em] bg-White rounded-[5px] absolute top-0 translate-y-[-50%]
+                    font-YekanBakh400 font-bold text-base leading-28 w-max
+                     text-blackTxt flex justify-center items-center">
+                        پروژه‌ی
+                    </span>
+                    <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                      @title
+                    </h2>
+                 </div>
+             
+                </div>
+             </a>
+        </div>
+     </face>
+ </basis>
+        
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
+<script src="[##cms.cms.cdn##]/js/product.js"></script>
+<script type="application/ld+json">
+    [##json.fq.column1##]
+  </script>
+</body>
+</html>

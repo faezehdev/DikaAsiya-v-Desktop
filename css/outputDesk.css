@@ -745,6 +745,10 @@ video {
   z-index: 1;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-2 {
   z-index: 2;
 }
@@ -1476,6 +1480,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-\[0\] {
+  --tw-translate-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-\[300\%\] {
   --tw-translate-y: 300%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2094,6 +2103,10 @@ video {
 
 .gap-\[8em\] {
   gap: 8em;
+}
+
+.gap-\[\.2em\] {
+  gap: .2em;
 }
 
 .gap-x-1 {
@@ -4445,6 +4458,35 @@ transform: scale(1);
   display: none;
 }
 
+main.Home .Banner-Slider .Text p{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  color: #F6F6F6;
+}
+
+main.Home .Banner-Slider .OV,
+main.ProductCat-C .OV {
+  background-color: #1C1C1C80;
+}
+
+main.Home .Section-2 .Middle{
+  width: 90%;
+  margin: 0 auto;
+}
+
+main.Home .Section-2 .Middle .Text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  color:#1C1C1C;
+  text-align: center;
+}
+
+.Parallax-Container{
+  align-items: center;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -4554,12 +4596,6 @@ transform: scale(1);
 .before\:shrink-0::before {
   content: var(--tw-content);
   flex-shrink: 0;
-}
-
-.before\:translate-y-\[10px\]::before {
-  content: var(--tw-content);
-  --tw-translate-y: 10px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .before\:translate-y-\[5px\]::before {
@@ -4797,6 +4833,10 @@ transform: scale(1);
   left: -100%;
 }
 
+.group\/hovermenu.openHover .group-\[\&\.openHover\]\/hovermenu\:flex {
+  display: flex;
+}
+
 .group\/tab.active .group-\[\&\.active\]\/tab\:w-full {
   width: 100%;
 }
@@ -4935,5 +4975,3 @@ transform: scale(1);
 .\[\&\:not\(\:last-child\)\]\:border-l-\[1px\]:not(:last-child) {
   border-left-width: 1px;
 }
-
-

@@ -1,0 +1,98 @@
+<<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+    <member request="navcatid" type="tree" name="nav" parentid="[##cms.query.catid##]" 
+    postsql="select * from [db.nav] where parentcatid=[##cms.query.catid##] " /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##cms.query.catid##]"> 
+    <member name="list" size="976x409" type="list"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[##cms.seo.title##]</title>
+    <meta name="description" content="[##cms.seo.description##]">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputDesk.css">
+</head>
+<body class=" bg-bgGray">
+    <main class="ProductList-C overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full flex mt-[10em] mb-[5em]">
+            <div class="Products-C w-90p mx-auto flex flex-col gap-4">
+                <div class="Title w-full flex justify-start items-center gap-5 border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke400">
+                        دسته‌بندی 
+                            محصولات
+                       
+                    </h1>
+                    <span class="w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        >
+                    </span>
+                    <span class="Current w-auto flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                     [##db.nav.title##]
+                    </span>
+                </div>
+                <div class="Products-Container w-full grid grid-cols-[1fr,4fr]">
+                    <div class="Right-Fixed relative flex gap-3 group/fixedMenu "id="scrollContainer" >
+                        <div class="Inner w-full duration-500  flex innerSlide h-[90vh] overflow-hidden  
+                        group-[&.goDown]/fixedMenu:translate-y-[10vh] translate-y-[0]" >
+                            <ul class="menu__list overflow-y-auto relative w-full pr-[15%]
+                             flex flex-col gap-3
+                           duration-500 ">
+                           <span class="absolute right-0 top-0 menu__active mt-[.4em] fixed-Icon
+                           
+                          duration-500">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M4.76869 5.99988L0.849695 9.8926C0.304287 10.4602 -3.42985e-08 11.2155 0 12.0001C3.42985e-08 12.7848 0.304287 13.5388 0.849695 14.1064L4.7687 18.0001L6.18269 16.5956L2.55069 13.0001L24 13.0001L23.9997 11.0001L2.55069 11.0001L6.18269 7.4044L4.76869 5.99988Z" fill="#1C1C1C"/>
+                                   </svg>
+                                   
+                           </span>
+                           <basis core="print" datamembername="db.list">
+                               <layout>
+                                   @child
+                               </layout>
+                               <face>
+                                <li  class="menu__item w-auto flex justify-start items-start hover:cursor-pointer">
+                                    <a class="menu__link  [&.active]:text-blackTxt duration-300
+                                     font-YekanBakh700 font-bold text-lg leading-32 text-Woodsmoke600">
+                                       @title
+                                </a>
+                                  
+                                </li>
+                               </face>
+                           </basis>                                                                         
+                            </ul>
+                        </div>
+                  
+                    </div>
+                    <div class="Left-Products w-full flex flex-col">
+                        <basis core="print" datamembername="db.list">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
+                        <a href="@link" alt="@title" title="@title" class="Product h-screen relative w-full flex justify-center items-center">
+                           <div class="IMG w-full h-full flex justify-center items-center">
+                            <img src="@00976X00409prp" alt="@title" title="@title" class="w-full object-cover h-full">
+                           </div>
+                           <div class="OV absolute pointer-events-none flex justify-end items-center
+                            left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
+                            <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                                @title
+                            </h2>
+                           </div>
+                        </a>
+                            </face>
+                        </basis>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+<basis core="call" file="script.inc" />
+<script src="[##cms.cms.cdn##]/js/productList.js"></script>
+</body>
+</html>
