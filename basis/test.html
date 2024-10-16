@@ -1,0 +1,38 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210200" > 
+    <member request="cat" type="tree" name="partition" parentid="210200" /> 
+</basis>
+       <div class="ProCats w-[93%] mr-auto flex justify-start flex-wrap gap-[8em]">
+                        <basis core="repeater" name="rep" datamembername="db.partition">
+                            <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
+                                <member name="listPartition" size="240x180" type="list"/> 
+                            </basis>
+                            <basis core="print" datamembername="db.listPartition">
+                                <layout>
+                                    <div class="cat w-auto flex flex-col gap-5 hover:cursor-pointer"
+                                     data-bg="[##cms.cms.cdn##]/images/[##rep.current.catid##].jpg">
+                                     <div class="Title w-auto flex justify-start items-center">
+                                        <p class="text-right font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke800">
+                                           [##rep.current.title##]
+                                        </p>
+                                    </div>
+                                    @child
+                                    </div>
+                                </layout>
+                                <face>
+           
+                                        <div class="Catpro w-auto flex flex-col gap-3">
+                                            <a href="@link" alt="@title" title="@title"
+                                            class="catItem text-right duration-150 hover:text-punch600
+                                             font-YekanBakh400 font-normal text-base leading-28 text-Woodsmoke800">
+                                              @title
+                                            </a>
+                                    
+                                        </div>
+                                
+                                </face>
+                            </basis>
+                        </basis>
+                  
+                       
+                         
+                      </div>

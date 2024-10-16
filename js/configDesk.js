@@ -27,8 +27,10 @@ otherItem.forEach(u=>{
 hoverMenu.addEventListener('mouseleave',(e)=>{
     hoverMenu.classList.remove('openHover')
 })
+for(let h=0;h<headerItems.length; h++){
+  headerItems[h].setAttribute('id',`m-item-${h+1}`)
+}
 headerItems.forEach(item=>{
-  
     item.addEventListener('mouseenter',(e)=>{
     hoverMenu.classList.add('openHover')
     let hashID = e.currentTarget.getAttribute('id')
