@@ -123,6 +123,12 @@
                             </basis>
                         
                         </div>
+                        <span class="mt-[1em] Btn-Show clickForm
+                        w-max border-[1px] border-Woodsmoke/50 bg-Woodsmoke600
+                       py-[.5em] px-[1.2em] flex justify-center items-center text-Woodsmoke/50
+                       font-YekanBakh400 font-normal text-sm leading-24 rounded-[5px]">
+                       فرم سفارش محصول
+                       </span>
                     </div>
                   <div class="Tab-Container w-full flex flex-col justify-start items-start gap-6 mt-[1.2em]">
                     <div class="Tab-Title border-b-[1px] border-Woodsmoke400 py-[.8em] w-full flex justify-start items-start gap-[1.5em]">
@@ -275,7 +281,64 @@
         </div>
      </face>
  </basis>
-        
+              <!-- popup form -->
+              <div class="ProductPOPUP">
+                <div class="PopUp_Box">
+                    <span class="Close"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.3375 1.41L11.1426 0L6.40509 5.59L1.66762 0L0.472656 1.41L5.21013 7L0.472656 12.59L1.66762 14L6.40509 8.41L11.1426 14L12.3375 12.59L7.60005 7L12.3375 1.41Z" fill="#E33026"/>
+                        </svg>
+                        </span>
+                    <div class="title">
+                        <h3>فرم سفارش کالا</h3>
+                    </div>
+                    <basis core="schema" run="atclient" OnRendered="rendered"
+                    schemaUrl="/schema/domainform/45852846-3914-43BE-9223-3C7029945225/65354E28-E9A8-49C2-90F1-9290FFDEF067/fa/فرم-سفارش-محصول" 
+                displayMode="new" button="[data-btn-add]" resultSourceId="demo.data"> 
+                </basis> 
+            
+                <basis core="callback" run="AtClient" triggers="demo.data" method="onSource2"></basis> 
+                <basis core="api" url="/schema/domainform/45852846-3914-43BE-9223-3C7029945225/fa/editobject" method="post" 
+                run="atclient" 
+                body="object_edit={##edit.object2.value##}&captcha={##edit.object2.captcha##}&captchaid={##edit.object2.captchaid##}" 
+                content-type="application/x-www-form-urlencoded" triggers="edit.object2" if="{##edit.object2|(false)##}" 
+                OnProcessed="OnProcessesEditObjectFn2"> 
+                </basis>
+                <basis core="dbsource" source="trust_login" run="atclient" name="captcha" triggers="refresh.captcha2">
+                    <member type="scalar" request="captcha" name="code2" />
+                    </basis>
+            
+                      
+                        <div class="col">
+                        <basis core="print" datamembername="captcha.code2" run="atclient">
+                            <layout>
+                                @child
+                            </layout>
+                            <face>
+                          
+                                <script type="text/template">
+                                   <div class="captchaBox">
+                                       <input type="hidden" name="captchaid" value="@captcha@" />
+                                         <!-- <input type="hidden" name="captcha" value="@captcha@" /> -->
+                                      <input type="text" class="codeinputm" name="captcha"
+                                      placeholder="عبارت امنیتی را وارد نمایید .." /> 
+                        
+                                      <img src="https://www.freeform.ir/assets/images/sync.png" class="refresh" alt="" bc-triggers="click" name="refresh.captcha2" bc-value="true"/>
+                                    
+                                       <img src="@captcha@" alt="captcha"  title="captcha" class="capcha"/>
+                                    
+                                 </div>
+                                </script>
+                            </face>
+                        </basis>
+                       
+                        </div>
+                        <button type="submit" class="schemaBtn" data-btn-add data-btn-submit="" > ثبت</button>
+            
+            
+                </div>
+            </div>
+            <div class="main-container"><h4></h4></div>
+            <!-- popup form -->
         <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
 <basis core="call" file="script.inc" />

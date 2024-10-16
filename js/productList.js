@@ -8,7 +8,7 @@ window.addEventListener("scroll", function(){
 
 ScrollTrigger.create({
     trigger: '.Right-Fixed',
-    start: 'top 10%',
+    start: 'top 20%',
     endTrigger: ".Left-Products",
     end: "bottom 100%",
     pin: true,
