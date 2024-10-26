@@ -157,9 +157,9 @@
                 </basis>  
             </div>
         </section>
-       <section class="Section-2 w-full flex justify-center items-center bg-bgGray pt-[2em] overflow-hidden">
+       <section class="Section-2 w-full flex justify-center items-center bg-bgGray pt-[3em] overflow-hidden">
         <div class="Parallax-Container w-full grid grid-cols-[1fr,2fr,1fr] justify-end items-end">
-            <div class="Right-IMG w-full flex flex-col gap-[1em]">
+            <div class="Right-IMG w-full flex flex-col gap-[3em]">
                 <basis core="print" datamembername="db.banners">
                     <layout>
                         @child
@@ -232,7 +232,7 @@
             </div>
         </div>
        </section>
-       <section class="Section-3 w-full relative h-screen flex" >
+       <section class="Section-3 w-full relative flex" >
         <basis core="print" datamembername="db.productCat">
             <layout>
                 @child
@@ -247,7 +247,7 @@
         <img src="[##cms.cms.cdn##]/images/CatProduct-Def.jpg" alt="DikaAsiya" title="DikaAsiya" class="imgBanner w-full h-full absolute top-0 left-0
         show [&.show]:opacity-[1] duration-[.8s] opacity-0" >
      
-        <div class="ProductCats-C w-full h-full flex flex-col justify-center items-center  relative z-[3]">
+        <div class="ProductCats-C py-[3.5em] w-full h-full flex flex-col justify-center items-center  relative z-[3]">
             <basis core="print" datamembername="db.productCat">
                 <layout>
                     @child
@@ -267,7 +267,7 @@
                     </div>
                 </face>
             </basis>
-            <div class="BottomS w-80p flex overflow-hidden mt-[3em]">
+            <div class="BottomS w-80p flex overflow-hidden ">
                 <div class="Procats w-full flex overflow-hidden">
                     <div class="swiper-procats w-full flex overflow-hidden py-[2em]">
                         <div class="swiper-wrapper w-full">
@@ -278,7 +278,7 @@
                                 <face filter="catid not in (210198)">
                                     <div class="swiper-slide group/prod w-full justify-center items-center
                                     flex GridItem "  data-IMG="[##cms.cms.cdn##]/images/@catid-Def.jpg">
-                                       <a href="@link" alt="@title" title="@title" class="w-full group-hover/prod:h-[130%] duration-[.8s]
+                                       <a href="@link" alt="@title" title="@title" class="w-full group-hover/prod:h-[108%] duration-[.8s]
                                         h-full ProCat relative flex justify-center items-center">
                                            <div class="IMG w-full flex h-full">
                                                <img src="[##cms.cms.cdn##]/images/@catid.jpg" alt="@title" title="@title" class="w-full h-full object-cover">
@@ -323,8 +323,9 @@
                               @urldescription
                             </span>
                             <span class="Btn w-auto flex justify-end items-center">
-                                <a  href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها"  class="Btn-Show flex w-max gap-2 border-Woodsmoke600 border-b-[1px]
-                                py-[.5em] px-[1.2em]  justify-center items-center text-blackTxt
+                                <a  href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها"  
+                                class="Btn-Show flex w-max gap-2 border-Woodsmoke600 border-b-[1px]
+                                py-[.5em]   justify-center items-center text-blackTxt
                                 font-YekanBakh400 font-normal text-sm leading-24 ">
                                 <span>
                                     همه‌ی پروژه‌ها
@@ -369,7 +370,7 @@
                     <a href="@link" alt="@title" title="@title" class="relative z-10 Proj group/proj w-full h-full flex  justify-start items-end [&:not(:last-child)]:border-l-[1px] border-bgGray" data-IMG="@01280X00448prp">
                             <div class="Detail  absolute z-3 left-0 right-0
                              duration-[.5s] ease-out group-hover/proj:translate-y-[0]
-                             w-90p mx-auto flex flex-col gap-2">
+                             w-85p mb-[1em] mx-auto flex flex-col gap-2">
                                 <div class="Title w-full flex justify-start items-start">
                                     <p class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
                                      @title

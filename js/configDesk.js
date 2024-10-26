@@ -195,9 +195,10 @@ function switchScroll() {
   searchPBTN.addEventListener('click',()=>{
     searchP.classList.add('openSearch')
     header.classList.add('activeHeader')
+    let input = document.querySelector('.Search-popup input#inputHeader')
     let innerBtn = document.querySelector('.SearchIcon-1')
     innerBtn.addEventListener('click',()=>{
-      let input = document.querySelector('.Search-popup input#inputHeader')
+     
       console.log('val',input.value);
       if(input.value == ''){
           return
@@ -207,26 +208,26 @@ function switchScroll() {
              setTimeout(()=>{
             window.location.href = `/search.bc?q=${input.value}`
              },1000)}
-             input.addEventListener("keypress", function(event) {
-              // If the user presses the "Enter" key on the keyboard
-              if (event.key === "Enter") {
-                // Cancel the default action, if needed
-                if(input.value != ''){
-                  event.preventDefault();
-                console.log('clicked');
-            console.log('val',input );
-            console.log('val',input.value);
-              window.location.href = `/search.bc?q=${input.value}`
-            setTimeout(() => {
-             
-            }, 1000);
-                }
-            
-            
-              }
-            })
+        
     })
-  
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        if(input.value != ''){
+          event.preventDefault();
+        console.log('clicked');
+    console.log('val',input );
+    console.log('val',input.value);
+      window.location.href = `/search.bc?q=${input.value}`
+    setTimeout(() => {
+     
+    }, 1000);
+        }
+    
+    
+      }
+    })
   })
   closeSBTN.addEventListener('click',()=>{
     searchP.classList.remove('openSearch')

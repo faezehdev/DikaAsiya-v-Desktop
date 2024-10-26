@@ -1,4 +1,4 @@
-<<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
     <member request="navcatid" type="tree" name="nav" parentid="[##cms.query.catid##]" 
     postsql="select * from [db.nav] where parentcatid=[##cms.query.catid##] " /> 
 </basis>
@@ -42,7 +42,7 @@
                            duration-500 ">
                            <span class="absolute right-0 top-0 menu__active mt-[.4em] fixed-Icon
                            
-                          duration-500">
+                          duration-[1s]">
                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M4.76869 5.99988L0.849695 9.8926C0.304287 10.4602 -3.42985e-08 11.2155 0 12.0001C3.42985e-08 12.7848 0.304287 13.5388 0.849695 14.1064L4.7687 18.0001L6.18269 16.5956L2.55069 13.0001L24 13.0001L23.9997 11.0001L2.55069 11.0001L6.18269 7.4044L4.76869 5.99988Z" fill="#1C1C1C"/>
                                    </svg>
@@ -72,17 +72,33 @@
                                 @child
                             </layout>
                             <face>
-                        <a href="@link" alt="@title" title="@title" class="Product h-screen relative w-full flex justify-center items-center">
+                        <div class="Product group/Product h-screen relative w-full flex justify-center items-center">
                            <div class="IMG w-full h-full flex justify-center items-center">
                             <img src="@00976X00409prp" alt="@title" title="@title" class="w-full object-cover h-full">
                            </div>
-                           <div class="OV absolute pointer-events-none flex justify-end items-center
-                            left-0 top-0 z-2 w-full h-full bg-[#1c1c1c5b]">
-                            <h2 class="ml-[5%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
+                           <div class="OV absolute flex justify-center items-start
+                            left-0 top-0 z-2 w-full flex-col h-full bg-[#1c1c1c5b]">
+                            <h2 class="mr-[85%] font-YekanBakh700 font-bold text-xl leading-35 text-Woodsmoke/50">
                                 @title
                             </h2>
+                            <div class="details overflow-hidden
+                            mr-[85%] flex justify-start items-start w-auto">
+                                <a href="@link" alt="@title" title="@title" class="w-auto group-hover/Product:translate-y-[0]
+                                flex justify-center translate-y-[100%] duration-700
+                                 items-center gap-4 border-b-[1px] border-Woodsmoke50">
+                                    <span class="flex justify-center items-center font-YekanBakh400 font-normal text-sm leading-24 text-Woodsmoke50">
+                                        اطلاعات بیشتر
+                                    </span>
+                                    <span class="flex justify-center items-center">
+                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.78174 0.499939L0.495655 2.77069C0.177501 3.10181 -2.00074e-08 3.54237 0 4.00008C2.00074e-08 4.4578 0.177501 4.89764 0.495655 5.22875L2.78174 7.50008L3.60657 6.68078L1.48791 4.58341L14 4.58342L13.9998 3.41675L1.48791 3.41675L3.60657 1.31924L2.78174 0.499939Z" fill="#F6F6F6"/>
+                                            </svg>
+                                            
+                                    </span>
+                                </a>
+                            </div>
                            </div>
-                        </a>
+                        </div>
                             </face>
                         </basis>
                         

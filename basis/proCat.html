@@ -1,111 +1,58 @@
-<basis core="dbsource" source="basiscore" name="db" lid="1" mid="19" > <member request="cat" type="tree" name="projectCat" parentid="210214" /> </basis>
-
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" >
+    <member request="cat" type="tree" name="productCat1" parentid="210198" postsql="select * from [db.productCat1] where parentid in (210198) "  sort="ord asc"/> 
+</basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <title>
-    پروژه‌ها 
-    
-  </title>
-
-
-        <meta name="description" content="پروژه‌های دیکا آسیا" />
-    
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="[##cms.cms.cdn##]/css/outputDesk.css">
-
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محصولات</title>
+    <meta name="description" content="محصولات">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.csm.cdn##]/css/outputDesk.css">
 </head>
-<body>
-
-<main class="productCat bg-bgGray">
-    <basis core="call" file="header.inc" />
-  <div id="fullpage">
-
-
-    <section class="section ">
-      <div class="inner h-svh flex-col flex justify-end">
-        <div class="section1 mb-16">
-          <h1 class="font-YekanBakh700 text-[32px] text-blackTxt mb-2 text-center" >
-  
-              دسته‌بندی پروژه‌ها
-          </h1>
-          <basis core="print" datamembername="db.projectCat">
-              <layout>
-                  <div class="para font-YekanBakh400 text-xl text-blackTxt text-center">
-                      
-                      @child
-                    </div>
-                </layout>
-                
-                <face filter="catid=210214">
-                    
-                    <p>
-                        @urldescription
-
-                    </p>
-              </face>
-          </basis>
-      </div>
-      <div class="section2 relative">
-          <div class="imgS relative after:absolute after:w-full after:h-full after:bg-[#1C1C1C80] after:inset-0">
-              <img class="w-full" src="[##cms.cms.cdn##]/images/projectCat-banner.jpg" alt=" دسته‌بندی پروژه‌ها" title=" دسته‌بندی پروژه‌ها">
-          </div>
-          <div class="over absolute bottom-16 flex flex-col items-center left-0 right-0">
-              <p class="font-YekanBakh400 text-base text-Woodsmoke50 text-center">
-                  اسکرول کنید
-              </p>
-              <div class="scrollD animate-scrollD">
-  
-                  <svg width="12" height="24" viewBox="0 0 12 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 19.2314L3.89272 23.1504C4.46034 23.6958 5.21559 24.0001 6.00025 24.0001C6.78491 24.0001 7.53891 23.6958 8.10653 23.1504L12.0002 19.2314L10.5957 17.8174L7.00024 21.4494L7.00025 0.00012207L5.00025 0.000429328L5.00025 21.4494L1.40452 17.8174L0 19.2314Z" fill="#F6F6F6"/>
-                  </svg>
-              </div>
-                  
-          </div>
-      </div>
-
-      </div>
-    </section>
-
-    <basis core="print" datamembername="db.projectCat">
-   
-    
-        <face filter="catid<>210214">
-            <section class="section section3 snapSection">
-             <div class="inner relative snapS h-svh">
-              <a href="/@link" title="@title">
-        
-                <div class="imgS relative h-full after:absolute after:w-full after:h-full after:inset-0 after:bg-gradient-to-t after:from-[#1C1C1CBF] after:to-#1C1C1C00">
-                    <img class="w-full h-full object-cover brightness-[0.25] duration-700" src="/@image" alt="@title" title="@title">
+<body class=" bg-bgGray">
+    <main class="ProductCat-C overflow-hidden" dir="rtl">
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="Section-1 w-full flex mt-[10em]">
+            <div class="Products-C w-90p mx-auto flex flex-col gap-4">
+                <div class="Title w-full flex justify-start border-b-[1px] border-Woodsmoke400 py-[.8em]">
+                    <h1 class="w-auto gap-1 flex justify-start items-start font-YekanBakh700 font-bold text-2xl leading-41 text-blackTxt">
+                        دسته‌بندی 
+                        <span class="color font-YekanBakh700 font-bold text-2xl leading-41 text-punch600">
+                            محصولات
+                        </span>
+                    </h1>
                 </div>
-                <div class="title absolute bottom-10 left-0 right-0 text-center">
-                    <h2 class="text-center font-YekanBakh700 text-[28px] text-Woodsmoke50 mb-2">
-                      @title
-                    </h2>
-                    <h3 class="text-center text-Woodsmoke50 font-YekanBakh400 text-lg">
-                        انواع @title
-                    </h3>
+                <div class="ProductCats flex-col w-full flex gap-[1em] justify-center items-center mt-[1.5em] mb-[5em]">
+                    <basis core="print" datamembername="db.productCat1">
+                        <layout>
+                            @child
+                        </layout>
+                        <face>
+                            <a href="@link"  alt="@title" title="@title" class="ProCat group/proCat overflow-hidden w-full before:content-[''] before:absolute before:left-0 before:top-0 before:w-full
+                            before:h-full before:bg-[#1C1C1C80 before:z-1] h-full
+                             w-full relative flex justify-center items-center">
+                              <div class="IMG flex w-full h-full overflow-hidden">
+                                <img src="@image" alt="@title" title="@title" class="w-full 
+                                group-hover/proCat:scale-[1.2] duration-[.5s] object-cover">
+                              </div>
+                              <div class="OV absolute left-0  w-full h-full top-0 z-3 flex justify-start items-end">
+                                <div class="title mb-[.8em] mr-[.8em] flex justify-start items-start">
+                                    <h2 class="font-YekanBakh700 font-bold text-2xl leading-41 text-Woodsmoke/50">
+                                       @title
+                                    </h2>
+                                </div>
+                              </div>
+                            </a>
+                        </face>
+                    </basis>
                 </div>
-            </a>
-             </div>
-            </section>
-            
-        </face>
-    </basis>
- 
-    <basis core="call" file="footer.inc" />
-
-    
-  </div>
- 
-</main>
-
+            </div>
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
 <basis core="call" file="script.inc" />
-
-
-<script src="[##cms.cms.cdn##]/_js/fullpage4.0.22.js"></script>
 <script src="[##cms.cms.cdn##]/js/productCat.js"></script>
 </body>
 </html>

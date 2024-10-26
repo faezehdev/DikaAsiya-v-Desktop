@@ -5,19 +5,39 @@
     <member request="cat" type="tree" name="productCat" parentid="210198" /> 
 </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210200" > 
-    <member request="cat" type="tree" name="partition" parentid="210200" /> 
+    <member request="cat" type="tree" name="partition" parentid="210200"/> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210200" > 
+    <member request="cat" type="tree" name="partition1" parentid="210200"
+    postsql="select * from [db.partition1] where catid not in (210200)"/> 
 </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210199" > 
     <member request="cat" type="tree" name="stikers" parentid="210199" /> 
 </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210199" > 
+    <member request="cat" type="tree" name="stikers1" parentid="210199"
+    postsql="select * from [db.stikers1] where catid not in (210199)"/> 
+</basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20"  catid="210201"> 
     <member request="cat" type="tree" name="doors" parentid="210201" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210201" > 
+    <member request="cat" type="tree" name="doors1" parentid="210201"
+    postsql="select * from [db.doors1] where catid not in (210201)"/> 
 </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210202" > 
     <member request="cat" type="tree" name="materials" parentid="210202" /> 
 </basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210202" > 
+    <member request="cat" type="tree" name="materials1" parentid="210202"
+    postsql="select * from [db.materials1] where catid not in (210202)"/> 
+</basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210203"> 
     <member request="cat" type="tree" name="yaragh" parentid="210203" /> 
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" catid="210203" > 
+    <member request="cat" type="tree" name="yaragh1" parentid="210203"
+    postsql="select * from [db.yaragh1] where catid not in (210203)"/> 
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="9636"> 
     <member name="socials" type="view" postsql="select * from [db.socials] where TypeID=245"/> 
@@ -26,11 +46,11 @@
 ease-in [&.goTop]:top-0
  left-0 right-0 w-full z-[99] [&.activeHeader]:bg-bgGray hover:bg-bgGray duration-150
 flex justify-center items-center h-[15vh] group/header flex-col
-hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]  " dir="rtl">
+hover:border-b-Woodsmoke400 hover:border-b-[1px] [&.activeHeader]:border-b-[1px] [&.activeHeader]:border-b-Woodsmoke400 " dir="rtl">
   <nav class="Header grid mx-auto  w-full h-full
    grid-cols-[1fr,2fr,.8fr] justify-center items-center">
     <div class="Right w-full flex h-full justify-start items-center ">
-        <span class="Items w-full grid h-full grid-cols-[1fr,1fr,1fr] justify-start items-center">
+        <span class="Items w-[90%] grid h-full grid-cols-[1fr,1fr,1fr] justify-start items-center">
             <span class="Item h-full 
             [&.active]:before:w-full
             relative before:content-[''] before:z-1
@@ -62,7 +82,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
              group-hover/header:border-l-[1px]
              w-full flex justify-center items-center ">
                 <div class="Toggles toggle-inner w-auto flex justify-center items-center hover:cursor-pointer gap-4">
-                    <div class="Toggles-Items w-[24px] flex flex-col gap-[3px]">
+                    <div class="Toggles-Items w-[24px] flex flex-col gap-[5px]">
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
                         <span class="Toggle duration-200 w-full h-[1px] bg-punch600"></span>
@@ -144,9 +164,9 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
    w-full left-0 bg-bgGray py-[3em] [&.openHover]:opacity-[1] [&.openHover]:pointer-events-auto">
     <div class="Bottom-Menu group-[&.openHover]/hovermenu:flex  hidden
     w-90p mx-auto  justify-center items-center relative min-h-[200px]">
-    <div class="m-item-1 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
+    <div class="m-item-3 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
     duration-[.5s] pointer-events-none [&.show]:opacity-[1] bottom-0
-     grid-cols-[40%,60%]" id="m-item-1">
+     grid-cols-[40%,60%]" id="m-item-3">
 
        <div class="Right w-full flex justify-start items-center">
            <div class="Cat-Img w-[97%] flex justify-start items-center opacity-0 duration-200 delay-100 [&.showIMG]:opacity-[1]
@@ -164,7 +184,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
        </div>
        <div class="Left w-full flex justify-start items-start">
           <div class="ProCats w-[93%] mr-auto flex justify-start flex-wrap gap-[8em]">
-            <basis core="repeater" name="rep" datamembername="db.stikers">
+            <basis core="repeater" name="rep" datamembername="db.stikers1">
                 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
                     <member name="listStikers" size="240x180" type="list"/> 
                 </basis>
@@ -199,9 +219,9 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
           </div>
        </div>
    </div>
-        <div class="m-item-2 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
+        <div class="m-item-1 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
                 duration-[.5s] pointer-events-none [&.show]:opacity-[1] bottom-0
-                 grid-cols-[40%,60%]" id="m-item-2">
+                 grid-cols-[40%,60%]" id="m-item-1">
            
                    <div class="Right w-full flex justify-start items-center">
                        <div class="Cat-Img w-[97%] flex justify-start items-center opacity-0 duration-200 delay-100 [&.showIMG]:opacity-[1]
@@ -219,7 +239,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
                    </div>
                    <div class="Left w-full flex justify-start items-start">
                       <div class="ProCats w-[93%] mr-auto flex justify-start flex-wrap gap-[8em]">
-                        <basis core="repeater" name="rep" datamembername="db.partition">
+                        <basis core="repeater" name="rep" datamembername="db.partition1">
                             <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
                                 <member name="listPartition" size="240x180" type="list"/> 
                             </basis>
@@ -254,9 +274,9 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
                       </div>
                    </div>
         </div>
-        <div class="m-item-3 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
+        <div class="m-item-2 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
         duration-[.5s] pointer-events-none [&.show]:opacity-[1] bottom-0
-         grid-cols-[40%,60%]" id="m-item-3">
+         grid-cols-[40%,60%]" id="m-item-2">
    
            <div class="Right w-full flex justify-start items-center">
                <div class="Cat-Img w-[97%] flex justify-start items-center opacity-0 duration-200 delay-100 [&.showIMG]:opacity-[1]
@@ -274,7 +294,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
            </div>
            <div class="Left w-full flex justify-start items-start">
               <div class="ProCats w-[93%] mr-auto flex justify-start flex-wrap gap-[8em]">
-                <basis core="repeater" name="rep" datamembername="db.doors">
+                <basis core="repeater" name="rep" datamembername="db.doors1">
                     <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
                         <member name="listDoors" size="240x180" type="list"/> 
                     </basis>
@@ -309,9 +329,9 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
            </div>
        </div>
      
-      <div class="m-item-4 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
+      <div class="m-item-5 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
       duration-[.5s] pointer-events-none [&.show]:opacity-[1] bottom-0
-       grid-cols-[40%,60%]" id="m-item-4">
+       grid-cols-[40%,60%]" id="m-item-5">
  
          <div class="Right w-full flex justify-start items-center">
              <div class="Cat-Img w-[97%] flex justify-start items-center opacity-0 duration-200 delay-100 [&.showIMG]:opacity-[1]
@@ -329,7 +349,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
          </div>
          <div class="Left w-full flex justify-start items-start">
             <div class="ProCats w-[93%] mr-auto flex justify-start flex-wrap gap-[8em]">
-              <basis core="repeater" name="rep" datamembername="db.materials">
+              <basis core="repeater" name="rep" datamembername="db.materials1">
                   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
                       <member name="listMaterials" size="240x180" type="list"/> 
                   </basis>
@@ -363,9 +383,9 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
             </div>
          </div>
      </div>
-     <div class="m-item-5 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
+     <div class="m-item-4 menuInner w-full grid absolute left-0 top-0 opacity-0 [&.show]:pointer-events-auto
        duration-[.5s] pointer-events-none [&.show]:opacity-[1] bottom-0
-        grid-cols-[40%,60%]" id="m-item-5">
+        grid-cols-[40%,60%]" id="m-item-4">
   
           <div class="Right w-full flex justify-start items-center">
               <div class="Cat-Img w-[97%] flex justify-start items-center opacity-0 duration-200 delay-100 [&.showIMG]:opacity-[1]
@@ -383,7 +403,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
           </div>
           <div class="Left w-full flex justify-start items-start">
              <div class="ProCats w-[93%] mr-auto flex justify-start flex-wrap gap-[8em]">
-               <basis core="repeater" name="rep" datamembername="db.yaragh">
+               <basis core="repeater" name="rep" datamembername="db.yaragh1">
                    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]">
                        <member name="listYaragh" size="240x180" type="list"/> 
                    </basis>
@@ -422,7 +442,7 @@ hover:border-b-Woodsmoke400 hover:border-b-[2px] [&.activeHeader]:border-b-[2px]
 </header>
 <div class="RightFixed-Menu left-[100vw]  duration-150 [&.openMenu]:left-0 
 w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061]">
-    <div class="Menu w-[35vw] grid grid-cols-[1fr,3fr] mt-auto bg-bgGray h-[85vh]">
+    <div class="Menu w-[35vw] grid grid-cols-[.888fr,3fr] mt-auto bg-bgGray h-[85vh]">
       <div class="Col w-full flex border-Woodsmoke/50 border-l-[1px] justify-center items-center">
         <div class="Socials w-full h-full flex flex-col justify-center items-center gap-5">
             <basis core="print" datamembername="db.socials">
@@ -487,11 +507,11 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
         </div>
       </div>
       <div class="Col  w-full flex flex-col justify-center items-center h-full">
-        <ul class="RightMenu w-[80%] mr-auto flex flex-col justify-center items-center gap-">
+        <ul class="RightMenu w-[80%] mr-auto flex flex-col justify-center items-center gap-[.5em]">
             <li class="Menu-item w-full flex justify-start items-start ">
 
                 <a href="محصولات" alt="محصولات" title="محصولات" class="menu-link w-auto flex gap-3 group/menu-link">
-                    <span class="num font-YekanBakh400 flex duration-150 group-hover/menu-link:text-punch600
+                    <span class="faNum num font-YekanBakh400 flex duration-150 group-hover/menu-link:text-punch600
                      justify-center items-center
                      font-normal text-base leading-28 text-Woodsmoke600">
                         01.
@@ -505,7 +525,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
             </li>
             <li class="Menu-item w-full flex justify-start items-start ">
                 <a href="ویدیوها" alt="ویدئو‌ها" title="ویدئو‌ها" class="menu-link w-auto flex gap-3 group/menu-link">
-                    <span class="num font-YekanBakh400 flex justify-center items-center
+                    <span class=" faNum num font-YekanBakh400 flex justify-center items-center
                      font-normal text-base leading-28 text-Woodsmoke600 duration-150 group-hover/menu-link:text-punch600">
                         02.
                     </span>
@@ -518,7 +538,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
             </li>
             <li class="Menu-item w-full flex justify-start items-start ">
                 <a href="پروژه-ها" alt="پروژه‌ها" title="پروژه‌ها" class="menu-link w-auto flex gap-3 group/menu-link">
-                    <span class="num font-YekanBakh400 flex justify-center items-center
+                    <span class="faNum num font-YekanBakh400 flex justify-center items-center
                      font-normal text-base leading-28 text-Woodsmoke600 duration-150 group-hover/menu-link:text-punch600">
                         03.
                     </span>
@@ -530,7 +550,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
             </li>
             <li class="Menu-item w-full flex justify-start items-start ">
                 <a href="مقالات"  alt="مقالات" title="مقالات" class="menu-link w-auto flex gap-3 group/menu-link">
-                    <span class="num font-YekanBakh400 flex justify-center items-center
+                    <span class="faNum num font-YekanBakh400 flex justify-center items-center
                      font-normal text-base leading-28 text-Woodsmoke600 duration-150 group-hover/menu-link:text-punch600">
                         04.
                     </span>
@@ -543,7 +563,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
             </li>
             <li class="Menu-item w-full flex justify-start items-start ">
                 <a href="تماس-با-ما" alt="تماس‌باما" title="تماس‌باما" class="menu-link w-auto flex gap-3 group/menu-link">
-                    <span class="num font-YekanBakh400 flex justify-center items-center
+                    <span class="faNum num font-YekanBakh400 flex justify-center items-center
                     font-normal text-base leading-28 text-Woodsmoke600 duration-150 group-hover/menu-link:text-punch600">
                         05.
                     </span>
@@ -556,7 +576,7 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
             </li>
             <li class="Menu-item w-full flex justify-start items-start ">
                 <a href="درباره-ما" alt="درباره‌ی‌ما" title="درباره‌ی‌ما" class="menu-link w-auto flex gap-3 group/menu-link">
-                    <span class="num font-YekanBakh400 flex justify-center items-center
+                    <span class="faNum num font-YekanBakh400 flex justify-center items-center
                      font-normal text-base leading-28 text-Woodsmoke600 duration-150 group-hover/menu-link:text-punch600">
                         06.
                     </span>
@@ -575,14 +595,14 @@ w-full h-screen flex justify-start top-0 fixed z-[98] [&.openMenu]:bg-[#00000061
              flex justify-center items-center border-Woodsmoke/50 border-[1px]">
                 <a href="#" class="w-full h-full  flex justify-center items-center
                 font-YekanBakh400 font-normal text-sm leading-24 text-Woodsmoke/50">
-                    fa
+                    FA
                 </a>
             </span>
             <span class="lang w-[50px] h-[50px] bg-Woodsmoke600 rounded-[5px] [&.active]:bg-punch600
             flex justify-center items-center border-Woodsmoke/50 border-[1px]">
                <a href="#" class="w-full h-full  flex justify-center items-center
                font-YekanBakh400 font-normal text-sm leading-24 text-Woodsmoke/50">
-                   en
+                 EN
                </a>
            </span>
         </div>

@@ -913,6 +913,10 @@ video {
   margin-bottom: .8em;
 }
 
+.mb-\[1em\] {
+  margin-bottom: 1em;
+}
+
 .mb-\[2em\] {
   margin-bottom: 2em;
 }
@@ -959,6 +963,10 @@ video {
 
 .mr-\[5\%\] {
   margin-right: 5%;
+}
+
+.mr-\[85\%\] {
+  margin-right: 85%;
 }
 
 .mr-auto {
@@ -1282,12 +1290,16 @@ video {
   width: 80%;
 }
 
+.w-85p {
+  width: 85%;
+}
+
 .w-9 {
   width: 2.25rem;
 }
 
 .w-90p {
-  width: 95%;
+  width: 93%;
 }
 
 .w-95p {
@@ -1360,6 +1372,10 @@ video {
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[85\%\] {
+  width: 85%;
 }
 
 .w-\[89px\] {
@@ -1480,8 +1496,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-\[0\] {
-  --tw-translate-y: 0;
+.translate-y-\[100\%\] {
+  --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1829,6 +1845,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-\[\.888fr\2c 3fr\] {
+  grid-template-columns: .888fr 3fr;
+}
+
 .grid-cols-\[1fr\2c 1fr\2c 1fr\2c 1fr\] {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -2089,6 +2109,10 @@ video {
   gap: .2em;
 }
 
+.gap-\[\.5em\] {
+  gap: .5em;
+}
+
 .gap-\[1\.5em\] {
   gap: 1.5em;
 }
@@ -2097,12 +2121,20 @@ video {
   gap: 1em;
 }
 
+.gap-\[3em\] {
+  gap: 3em;
+}
+
 .gap-\[3px\] {
   gap: 3px;
 }
 
 .gap-\[4em\] {
   gap: 4em;
+}
+
+.gap-\[5px\] {
+  gap: 5px;
 }
 
 .gap-\[8em\] {
@@ -3028,6 +3060,11 @@ video {
   padding-bottom: 2em;
 }
 
+.py-\[3\.5em\] {
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+}
+
 .py-\[3em\] {
   padding-top: 3em;
   padding-bottom: 3em;
@@ -3152,6 +3189,10 @@ video {
 
 .pt-\[2em\] {
   padding-top: 2em;
+}
+
+.pt-\[3em\] {
+  padding-top: 3em;
 }
 
 .text-left {
@@ -3831,6 +3872,10 @@ video {
   transition-duration: .8s;
 }
 
+.duration-\[1s\] {
+  transition-duration: 1s;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -3934,13 +3979,13 @@ video {
 @font-face {
   font-family: "IRANSansWeb300";
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Light.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot");
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Light.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_Light.eot?#iefix")
         format("embedded-opentype"),
       url("../../_fonts/IRANSansWeb(FaNum)_Light.woff") format("woff"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Light.ttf") format("truetype");
+      url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+      url("../_fonts/IRANSansWeb(FaNum)_Light.ttf") format("truetype");
 
   font-weight: 300;
 
@@ -3952,13 +3997,13 @@ video {
 @font-face {
   font-family: "IRANSansWeb400";
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
         format("embedded-opentype"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+      url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+      url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+      url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
 
   font-weight: 400;
 
@@ -3970,13 +4015,13 @@ video {
 @font-face {
   font-family: "IRANSansWeb500";
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
         format("embedded-opentype"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+      url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+      url("../_fonts/IRANSansWeb(FaNum)_Light.woff2") format("woff2"),
+      url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
 
   font-weight: 500;
 
@@ -3990,13 +4035,13 @@ video {
 
   font-family: "IRANSansWeb(FaNum)700";
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot");
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
         format("embedded-opentype"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
-      url("../../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+      url("../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+      url("../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
+      url("../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
 
   font-weight: 700;
 
@@ -4008,13 +4053,13 @@ video {
 @font-face {
   font-family: "IRANSansWeb(FaNum)700";
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot");
 
-  src: url("../../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+  src: url("../_fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix")
           format("embedded-opentype"),
-        url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
-        url("../../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
-        url("../../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+        url("../_fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"),
+        url("../_fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"),
+        url("../_fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
 
   font-weight: 700;
 
@@ -4140,11 +4185,11 @@ main.Home .Section-1 .swiper-pagination-bullet-active .line::before{
 }
 
 img.parallax-3{
-  transform: translate(-15%,10%);
-  -webkit-transform: translate(-15%,10%);
-  -moz-transform: translate(-15%,10%);
-  -ms-transform: translate(-15%,10%);
-  -o-transform: translate(-15%,10%);
+  transform: translate(-37%,10%);
+  -webkit-transform: translate(-37%,10%);
+  -moz-transform: translate(-37%,10%);
+  -ms-transform: translate(-37%,10%);
+  -o-transform: translate(-37%,10%);
 }
 
 .Home .Section-3::before{
@@ -4741,6 +4786,14 @@ main.Home .Section-2 .Middle .Text p {
   overflow: hidden !important;
 }
 
+header.activeHeader .Right .Item:nth-child(1) svg path{
+  fill: #454545 !important;
+}
+
+header:hover .Right .Item:nth-child(1) svg path{
+  fill: #454545 !important;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -4947,6 +5000,10 @@ main.Home .Section-2 .Middle .Text p {
   cursor: pointer;
 }
 
+.hover\:border-b-\[1px\]:hover {
+  border-bottom-width: 1px;
+}
+
 .hover\:border-b-\[2px\]:hover {
   border-bottom-width: 2px;
 }
@@ -4993,6 +5050,10 @@ main.Home .Section-2 .Middle .Text p {
   text-align: center;
 }
 
+.group\/prod:hover .group-hover\/prod\:h-\[108\%\] {
+  height: 108%;
+}
+
 .group\/prod:hover .group-hover\/prod\:h-\[130\%\] {
   height: 130%;
 }
@@ -5004,6 +5065,11 @@ main.Home .Section-2 .Middle .Text p {
 
 .group\/tab:hover .group-hover\/tab\:w-full {
   width: 100%;
+}
+
+.group\/Product:hover .group-hover\/Product\:translate-y-\[0\] {
+  --tw-translate-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group\/proj:hover .group-hover\/proj\:translate-y-\[0\] {
@@ -5095,11 +5161,6 @@ main.Home .Section-2 .Middle .Text p {
   width: 100%;
 }
 
-.group\/fixedMenu.goDown .group-\[\&\.goDown\]\/fixedMenu\:translate-y-\[10vh\] {
-  --tw-translate-y: 10vh;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group\/header.activeHeader .group-\[\&\.activeHeader\]\/header\:border-l-\[1px\] {
   border-left-width: 1px;
 }
@@ -5144,8 +5205,17 @@ main.Home .Section-2 .Middle .Text p {
   }
 }
 
+.\[\&\.activeHeader\]\:border-b-\[1px\].activeHeader {
+  border-bottom-width: 1px;
+}
+
 .\[\&\.activeHeader\]\:border-b-\[2px\].activeHeader {
   border-bottom-width: 2px;
+}
+
+.\[\&\.activeHeader\]\:border-b-Woodsmoke400.activeHeader {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(136 136 136 / var(--tw-border-opacity));
 }
 
 .\[\&\.activeHeader\]\:bg-bgGray.activeHeader {
