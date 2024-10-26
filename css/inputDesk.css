@@ -741,3 +741,6 @@ fill: #454545 !important;
 header:hover .Right .Item:nth-child(1) svg path{
   fill: #454545 !important;
 }
+footer .Socials{
+  direction: ltr !important;
+}

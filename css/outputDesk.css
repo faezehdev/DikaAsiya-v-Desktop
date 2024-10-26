@@ -4794,6 +4794,10 @@ header:hover .Right .Item:nth-child(1) svg path{
   fill: #454545 !important;
 }
 
+footer .Socials{
+  direction: ltr !important;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
