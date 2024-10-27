@@ -14,6 +14,7 @@ let HoverMneu =document.querySelector('.Hoverd-Menu-C')
 
 document.addEventListener('mouseleave',()=>{
   header.classList.remove('activeHeader')
+  toggleMenu.classList.remove('openMenu')
       hoverMenu.classList.remove('openHover')
         headerItems.map(menu=>{
             return menu.classList.remove('active')
