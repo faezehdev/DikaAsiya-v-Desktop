@@ -16,7 +16,7 @@ document.addEventListener('mouseleave',()=>{
   toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
   header.classList.remove('activeHeader')
-
+  lenis.start()
       hoverMenu.classList.remove('openHover')
         headerItems.map(menu=>{
             return menu.classList.remove('active')
