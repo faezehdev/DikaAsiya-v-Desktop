@@ -11,10 +11,22 @@ let toggleMenu = document.querySelector('.RightFixed-Menu')
 let hoverMenu = document.querySelector('.Hoverd-Menu-C')
 let otherItem =document.querySelectorAll('.Header .Right > .Items .Item')
 let HoverMneu =document.querySelector('.Hoverd-Menu-C')
+
+document.addEventListener('mouseleave',()=>{
+  header.classList.remove('activeHeader')
+      hoverMenu.classList.remove('openHover')
+        headerItems.map(menu=>{
+            return menu.classList.remove('active')
+   })
+  })
 header.addEventListener('mouseleave',()=>{
+  
     headerItems.map(menu=>{
         return menu.classList.remove('active')
     })
+})
+header.addEventListener('mouseenter',(e)=>{
+  header.classList.add('activeHeader')
 })
 otherItem.forEach(u=>{
     u.addEventListener('mouseenter',(e)=>{
@@ -26,6 +38,7 @@ otherItem.forEach(u=>{
 })
 hoverMenu.addEventListener('mouseleave',(e)=>{
     hoverMenu.classList.remove('openHover')
+    header.classList.remove('activeHeader')
 })
 for(let h=0;h<headerItems.length; h++){
   headerItems[h].setAttribute('id',`m-item-${h+1}`)
@@ -54,9 +67,9 @@ headerItems.forEach(item=>{
             console.log(bg);
             mainIMG.classList.remove('showIMG')
             mainIMG.querySelector('img').setAttribute('src',bg)
-            setTimeout(() => {
+            // setTimeout(() => {
                 mainIMG.classList.add('showIMG')
-            }, 100);
+            // }, 100);
            
             })
         })
@@ -68,12 +81,27 @@ headerItems.forEach(item=>{
     }
     })
 })
+let isopen = false
 toggle.addEventListener('click',()=>{
+  if(!isopen){
     toggleMenu.classList.toggle('openMenu')
     toggle.classList.toggle('openMenu')
     header.classList.add('activeHeader')
     HoverMneu.classList.add('notActive')
     document.querySelector('.toggle-menu').classList.toggle('active')
+    isopen = true
+    lenis.stop()
+  }
+else{
+  toggleMenu.classList.toggle('openMenu')
+  toggle.classList.toggle('openMenu')
+  header.classList.add('activeHeader')
+  HoverMneu.classList.add('notActive')
+  document.querySelector('.toggle-menu').classList.toggle('active')
+  isopen = false
+  lenis.start()
+}
+  
 })
 
 
