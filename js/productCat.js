@@ -48,7 +48,7 @@ document.addEventListener('mouseleave',()=>{
   toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
-  // header.classList.remove('activeHeader')
+  document.querySelector('.toggle-menu').classList.remove('active')
   lenis.start()
       hoverMenu.classList.remove('openHover')
         headerItems.map(menu=>{
@@ -124,7 +124,7 @@ toggle.addEventListener('click',()=>{
     toggle.classList.add('openMenu')
     header.classList.add('activeHeader')
     HoverMneu.classList.add('notActive')
-    document.querySelector('.toggle-menu').classList.toggle('active')
+    document.querySelector('.toggle-menu').classList.add('active')
     isopen = true
     lenis.stop()
   }
@@ -133,7 +133,7 @@ else{
   toggle.classList.remove('openMenu')
   header.classList.add('activeHeader')
   HoverMneu.classList.add('notActive')
-  document.querySelector('.toggle-menu').classList.toggle('active')
+  document.querySelector('.toggle-menu').classList.remove('active')
   isopen = false
   lenis.start()
 }
