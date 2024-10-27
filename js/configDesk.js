@@ -13,8 +13,10 @@ let otherItem =document.querySelectorAll('.Header .Right > .Items .Item')
 let HoverMneu =document.querySelector('.Hoverd-Menu-C')
 
 document.addEventListener('mouseleave',()=>{
-  header.classList.remove('activeHeader')
   toggleMenu.classList.remove('openMenu')
+  toggle.classList.remove('openMenu')
+  header.classList.remove('activeHeader')
+
       hoverMenu.classList.remove('openHover')
         headerItems.map(menu=>{
             return menu.classList.remove('active')
