@@ -115,7 +115,7 @@ window.addEventListener("scroll", function(){
     $("header").addClass("goDown");
     $("header").removeClass("goTop");
     $(".Search-popup").addClass("goDown");
-    
+    hoverMenu.classList.remove('openHover')
     if(document.querySelector('main.ProductList-C')){
       document.querySelector('.Right-Fixed').classList.add('goDown')
     }
