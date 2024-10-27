@@ -15,7 +15,7 @@
     <member name="banners" type="list" format="4" /> 
 </basis>
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" > 
-    <member request="cat" type="tree" name="productCat" parentid="210198" /> 
+    <member request="cat" type="tree" name="productCatInner" parentid="210198" /> 
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="210204">
     <member name="list" size="1280x448" type="list"/> 
@@ -271,11 +271,11 @@
                 <div class="Procats w-full flex overflow-hidden">
                     <div class="swiper-procats w-full flex overflow-hidden py-[2em]">
                         <div class="swiper-wrapper w-full">
-                            <basis core="print" datamembername="db.productCat">
+                            <basis core="print" datamembername="db.productCatInner">
                                 <layout>
                                     @child
                                 </layout>
-                                <face filter="catid not in (210198)">
+                                <face filter="parentid in (210198)">
                                     <div class="swiper-slide group/prod w-full justify-center items-center
                                     flex GridItem "  data-IMG="[##cms.cms.cdn##]/images/@catid-Def.jpg">
                                        <a href="@link" alt="@title" title="@title" class="w-full group-hover/prod:h-[108%] duration-[.8s]

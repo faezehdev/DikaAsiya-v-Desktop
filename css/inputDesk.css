@@ -112,12 +112,9 @@ header .toggle-inner.openMenu .Toggle:nth-child(2){
   opacity: 0;
 }
 header .toggle-inner.openMenu .Toggle:nth-child(3){
-  transform-origin: 16px -6px;
+  transform-origin: 20px -9px;
   transform: rotate(51deg);
   -webkit-transform: rotate(51deg);
-  -moz-transform: rotate(51deg);
-  -ms-transform: rotate(51deg);
-  -o-transform: rotate(51deg);
 }
 main.Home .Section-1 .swiper-pagination{
 width: 95%;
