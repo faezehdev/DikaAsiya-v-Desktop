@@ -142,7 +142,7 @@ toggle.addEventListener('click',()=>{
 else{
   toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
-  header.classList.add('activeHeader')
+  header.classList.remove('activeHeader')
   HoverMneu.classList.add('notActive')
   document.querySelector('.toggle-menu').classList.remove('active')
   isopen = false
