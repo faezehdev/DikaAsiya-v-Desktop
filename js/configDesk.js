@@ -28,9 +28,9 @@ header.addEventListener('mouseleave',()=>{
         return menu.classList.remove('active')
     })
 })
-header.addEventListener('mouseenter',(e)=>{
-  header.classList.add('activeHeader')
-})
+// header.addEventListener('mouseenter',(e)=>{
+//   header.classList.add('activeHeader')
+// })
 otherItem.forEach(u=>{
     u.addEventListener('mouseenter',(e)=>{
         hoverMenu.classList.remove('openHover')
