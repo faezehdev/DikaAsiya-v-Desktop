@@ -1,4 +1,3 @@
-
 //header hover bottom Menu
 let bottomMenu
 let header = document.querySelector('header')
@@ -20,7 +19,7 @@ document.addEventListener('mouseleave',()=>{
   toggle.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
   document.querySelector('.toggle-menu').classList.remove('active')
-  // lenis.start()
+  lenis.start()
       hoverMenu.classList.remove('openHover')
         headerItems.map(menu=>{
             return menu.classList.remove('active')
@@ -105,59 +104,7 @@ else{
   HoverMneu.classList.add('notActive')
   document.querySelector('.toggle-menu').classList.remove('active')
   isopen = false
-  // lenis.start()
+  lenis.start()
 }
   
 })
-// search popup
-let searchP = document.querySelector('.Search-popup')
-let searchPBTN = document.querySelector('header .searchIconHeader')
-let closeSBTN = document.querySelector('.Search-popup .Close')
-searchPBTN.addEventListener('click',()=>{
-  searchP.classList.add('openSearch')
-  header.classList.add('activeHeader')
-  let input = document.querySelector('.Search-popup input#inputHeader')
-  let innerBtn = document.querySelector('.SearchIcon-1')
-  innerBtn.addEventListener('click',()=>{
-   
-    console.log('val',input.value);
-    if(input.value == ''){
-        return
-         }
-       else{
-           console.log('val',input.value);
-           setTimeout(()=>{
-          window.location.href = `/search.bc?q=${input.value}`
-           },1000)}
-      
-  })
-  input.addEventListener("keypress", function(event) {
-    // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter") {
-      // Cancel the default action, if needed
-      if(input.value != ''){
-        event.preventDefault();
-      console.log('clicked');
-  console.log('val',input );
-  console.log('val',input.value);
-    window.location.href = `/search.bc?q=${input.value}`
-  setTimeout(() => {
-   
-  }, 1000);
-      }
-  
-  
-    }
-  })
-})
-closeSBTN.addEventListener('click',()=>{
-  searchP.classList.remove('openSearch')
-})
-  header.classList.add('activeHeader')
-
-
-
-
-
-
-  
