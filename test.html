@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> 
     <member name="article" type="view"/> 
   </basis>
@@ -114,6 +115,8 @@
                      @largetext
                     </p>
                         </face>
+=======
+>>>>>>> 045481fdb48b48d767f47bdc866b39d6b7f613d7
 <basis core="dbsource" request="seo" source="basiscore" name="db" lid="1">
     <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
   </basis>
@@ -215,6 +218,7 @@
                             <img src="/@largeIMG" alt="[##cms.seo.title##]" title="[##cms.seo.title##]" />
                         </face>
                     </basis>
+<<<<<<< HEAD
                 </div>
             </div>
             <div class="section2">
@@ -754,6 +758,49 @@
     <script src="[##cms.cms.cdn##]/_js/swiper.js"></script>
     <script src="[##cms.cms.cdn##]/newD/js/article.js"></script>
 =======
+=======
+                    <basis core="group" if="'[##db.pdf.RowNumber##]' <> '' "> 
+                        <div class="catalouge">
+                            <h3 class="font-Ravi500 text-base text-dark mb-10">
+                                کاتالوگ پروژه
+                            </h3>
+    
+                            <div class="imgS mb-5">
+                                <basis core="print" datamembername="db.image">
+                                 
+                                    <face filter="ord=10">
+                                        
+                                        <img src="/@largeIMG" alt="@name">
+                                    </face>
+                                </basis>
+                            </div>
+                            <basis core="print" datamembername="db.pdf">
+                              
+                                <face>
+                                    
+                                    <a class="flex mx-auto w-fit gap-x-2 items-center py-1.5 px-2 bg-main rounded-[5px]" href="/@largeIMG"
+                                        download="/@largeIMG" title="دانلود کاتالوگ">
+                                        <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1 6.64114V7.92857C1 8.08012 1.0602 8.22547 1.16737 8.33263C1.27453 8.4398 1.41988 8.5 1.57143 8.5H8.42857C8.58012 8.5 8.72547 8.4398 8.83263 8.33263C8.9398 8.22547 9 8.08012 9 7.92857V6.64114M5 5.5V0.5M3 4L5 6L7 4"
+                                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+            
+            
+                                        <span class="font-Ravi400 text-xs text-white">
+                                            دانلود کاتالوگ
+                                        </span>
+                                    </a>
+                                </face>
+                            </basis>
+                        </div>
+                        
+                    </basis>
+                </div>
+            </div>
+        </div>
+>>>>>>> 045481fdb48b48d767f47bdc866b39d6b7f613d7
   
         <basis core="print" datamembername="db.join">
             <layout>
@@ -904,11 +951,15 @@
     <script src="[##cms.cms.cdn##]/_js/smooth-scrollbar.js"></script>
     <script src="[##cms.cms.cdn##]/_js/imageLoaded.js"></script>
     <script src="[##cms.cms.cdn##]/js/project.js"></script>
+<<<<<<< HEAD
 >>>>>>> cfbde9a18e033b29b2812a21f40a8e7d11c9bf42
+=======
+>>>>>>> 045481fdb48b48d767f47bdc866b39d6b7f613d7
     <script type="application/ld+json"> 
         [##json.fq.column1##] 
         </script>
   </body>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -919,3 +970,7 @@
 
 </html>
 >>>>>>> cd989a6afbe19a94c6b44220a2d9544cdd182e2f
+=======
+  
+  </html>
+>>>>>>> 045481fdb48b48d767f47bdc866b39d6b7f613d7

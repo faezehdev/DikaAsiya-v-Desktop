@@ -291,6 +291,7 @@ opacity: 1 !important;
 main.Product-Show .swiper-pagination .swiper-pagination-bullet-active{
   background-color: #E33026 !important;
 }
+<<<<<<< HEAD
 #inputHeader{
   width: 100%;
   background: #D1D1D1;
@@ -334,6 +335,8 @@ main.Product-Show .swiper-pagination .swiper-pagination-bullet-active{
   -ms-border-radius: 0;
   -o-border-radius: 0;
 }
+=======
+>>>>>>> 045481fdb48b48d767f47bdc866b39d6b7f613d7
 
 
   *{
@@ -482,6 +485,7 @@ color: #1C1C1C!important;
    }
 
 
+<<<<<<< HEAD
 main.Home .Banner-Slider .Text p{
 font-size: 20px;
 font-weight: 400;
@@ -741,3 +745,5 @@ header:hover .Right .Item:nth-child(1) svg path{
 footer .Socials{
   direction: ltr !important;
 }
+=======
+>>>>>>> 045481fdb48b48d767f47bdc866b39d6b7f613d7
