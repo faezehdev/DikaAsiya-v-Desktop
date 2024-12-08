@@ -11,11 +11,15 @@ let toggleMenu = document.querySelector('.RightFixed-Menu')
 let hoverMenu = document.querySelector('.Hoverd-Menu-C')
 let otherItem =document.querySelectorAll('.Header .Right > .Items .Item')
 let HoverMneu =document.querySelector('.Hoverd-Menu-C')
+let searchP = document.querySelector('.Search-popup')
+let searchPBTN = document.querySelector('header .searchIconHeader')
+let closeSBTN = document.querySelector('.Search-popup .Close')
 let OtherItems = document.querySelectorAll('header .Right .Items .Item ')
 let menuOP = false
 let isopen = false
 document.addEventListener('mouseleave',()=>{
   isopen = false
+  searchP.classList.remove('openSearch')
   toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
@@ -33,9 +37,9 @@ header.addEventListener('mouseleave',()=>{
         return menu.classList.remove('active')
     })
 })
-header.addEventListener('mouseenter',(e)=>{
-  header.classList.add('activeHeader')
-})
+// header.addEventListener('mouseenter',(e)=>{
+//   header.classList.add('activeHeader')
+// })
 otherItem.forEach(u=>{
     u.addEventListener('mouseenter',(e)=>{
         hoverMenu.classList.remove('openHover')
@@ -114,19 +118,67 @@ else{
     console.log('hide menu');
   toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
+//   header.classList.add('activeHeader')
+// 
   header.classList.remove('activeHeader')
   HoverMneu.classList.add('notActive')
   document.querySelector('.toggle-menu').classList.remove('active')
   isopen = false
   lenis.start()
-  OtherItems.forEach(o=>{
-    o.addEventListener('mouseleave',()=>{
-        header.classList.remove('activeHeader')
-    })
-})
+//   OtherItems.forEach(o=>{
+//     o.addEventListener('mouseleave',()=>{
+//         header.classList.remove('activeHeader')
+//     })
+// })
 }
   
 })
 
+
+
+  // search popup
+  searchPBTN.addEventListener('click',()=>{
+    searchP.classList.add('openSearch')
+    header.classList.add('activeHeader')
+    let input = document.querySelector('.Search-popup input#inputHeader')
+    let innerBtn = document.querySelector('.SearchIcon-1')
+    innerBtn.addEventListener('click',()=>{
+     
+      console.log('val',input.value);
+      if(input.value == ''){
+          return
+           }
+         else{
+             console.log('val',input.value);
+             setTimeout(()=>{
+            window.location.href = `/search.bc?q=${input.value}`
+             },1000)}
+        
+    })
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        if(input.value != ''){
+          event.preventDefault();
+        console.log('clicked');
+    console.log('val',input );
+    console.log('val',input.value);
+      window.location.href = `/search.bc?q=${input.value}`
+    setTimeout(() => {
+     
+    }, 1000);
+        }
+    
+    
+      }
+    })
+  })
+  closeSBTN.addEventListener('click',()=>{
+    console.log('clll');
+    
+    header.classList.remove('activeHeader')
+    searchP.classList.remove('openSearch')
+  })
 
    

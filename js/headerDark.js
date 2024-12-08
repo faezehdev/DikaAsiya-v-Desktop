@@ -11,6 +11,9 @@ let toggleMenu = document.querySelector('.RightFixed-Menu')
 let hoverMenu = document.querySelector('.Hoverd-Menu-C')
 let otherItem =document.querySelectorAll('.Header .Right > .Items .Item')
 let HoverMneu =document.querySelector('.Hoverd-Menu-C')
+let searchP = document.querySelector('.Search-popup')
+let searchPBTN = document.querySelector('header .searchIconHeader')
+let closeSBTN = document.querySelector('.Search-popup .Close')
 header.classList.add('activeHeader')
 let isopen = false
 document.addEventListener('mouseleave',()=>{
@@ -18,6 +21,7 @@ document.addEventListener('mouseleave',()=>{
   toggleMenu.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
   toggle.classList.remove('openMenu')
+  searchP.classList.remove('openSearch')
   document.querySelector('.toggle-menu').classList.remove('active')
   lenis.start()
       hoverMenu.classList.remove('openHover')
@@ -108,3 +112,48 @@ else{
 }
   
 })
+
+  // search popup
+
+  searchPBTN.addEventListener('click',()=>{
+    searchP.classList.add('openSearch')
+    header.classList.add('activeHeader')
+    let input = document.querySelector('.Search-popup input#inputHeader')
+    let innerBtn = document.querySelector('.SearchIcon-1')
+    innerBtn.addEventListener('click',()=>{
+     
+      console.log('val',input.value);
+      if(input.value == ''){
+          return
+           }
+         else{
+             console.log('val',input.value);
+             setTimeout(()=>{
+            window.location.href = `/search.bc?q=${input.value}`
+             },1000)}
+        
+    })
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        if(input.value != ''){
+          event.preventDefault();
+        console.log('clicked');
+    console.log('val',input );
+    console.log('val',input.value);
+      window.location.href = `/search.bc?q=${input.value}`
+    setTimeout(() => {
+     
+    }, 1000);
+        }
+    
+    
+      }
+    })
+  })
+  closeSBTN.addEventListener('click',()=>{
+    searchP.classList.remove('openSearch')
+  })
+
+   

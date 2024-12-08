@@ -110,47 +110,47 @@ function switchScroll() {
   
   requestAnimationFrame(raf)
 
-  // search popup
-  let searchP = document.querySelector('.Search-popup')
-  let searchPBTN = document.querySelector('header .searchIconHeader')
-  let closeSBTN = document.querySelector('.Search-popup .Close')
-  searchPBTN.addEventListener('click',()=>{
-    searchP.classList.add('openSearch')
-    header.classList.add('activeHeader')
-    let input = document.querySelector('.Search-popup input#inputHeader')
-    let innerBtn = document.querySelector('.SearchIcon-1')
-    innerBtn.addEventListener('click',()=>{
+  // // search popup
+  // let searchP = document.querySelector('.Search-popup')
+  // let searchPBTN = document.querySelector('header .searchIconHeader')
+  // let closeSBTN = document.querySelector('.Search-popup .Close')
+  // searchPBTN.addEventListener('click',()=>{
+  //   searchP.classList.add('openSearch')
+  //   header.classList.add('activeHeader')
+  //   let input = document.querySelector('.Search-popup input#inputHeader')
+  //   let innerBtn = document.querySelector('.SearchIcon-1')
+  //   innerBtn.addEventListener('click',()=>{
      
-      console.log('val',input.value);
-      if(input.value == ''){
-          return
-           }
-         else{
-             console.log('val',input.value);
-             setTimeout(()=>{
-            window.location.href = `/search.bc?q=${input.value}`
-             },1000)}
+  //     console.log('val',input.value);
+  //     if(input.value == ''){
+  //         return
+  //          }
+  //        else{
+  //            console.log('val',input.value);
+  //            setTimeout(()=>{
+  //           window.location.href = `/search.bc?q=${input.value}`
+  //            },1000)}
         
-    })
-    input.addEventListener("keypress", function(event) {
-      // If the user presses the "Enter" key on the keyboard
-      if (event.key === "Enter") {
-        // Cancel the default action, if needed
-        if(input.value != ''){
-          event.preventDefault();
-        console.log('clicked');
-    console.log('val',input );
-    console.log('val',input.value);
-      window.location.href = `/search.bc?q=${input.value}`
-    setTimeout(() => {
+  //   })
+  //   input.addEventListener("keypress", function(event) {
+  //     // If the user presses the "Enter" key on the keyboard
+  //     if (event.key === "Enter") {
+  //       // Cancel the default action, if needed
+  //       if(input.value != ''){
+  //         event.preventDefault();
+  //       console.log('clicked');
+  //   console.log('val',input );
+  //   console.log('val',input.value);
+  //     window.location.href = `/search.bc?q=${input.value}`
+  //   setTimeout(() => {
      
-    }, 1000);
-        }
+  //   }, 1000);
+  //       }
     
     
-      }
-    })
-  })
-  closeSBTN.addEventListener('click',()=>{
-    searchP.classList.remove('openSearch')
-  })
+  //     }
+  //   })
+  // })
+  // closeSBTN.addEventListener('click',()=>{
+  //   searchP.classList.remove('openSearch')
+  // })

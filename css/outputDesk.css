@@ -1029,6 +1029,18 @@ video {
   margin-top: auto;
 }
 
+.mt-\[\.5em\] {
+  margin-top: .5em;
+}
+
+.ml-\[8\%\] {
+  margin-left: 8%;
+}
+
+.mt-\[7em\] {
+  margin-top: 7em;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1273,6 +1285,18 @@ video {
   height: 100svh;
 }
 
+.h-\[10vh\] {
+  height: 10vh;
+}
+
+.h-\[54px\] {
+  height: 54px;
+}
+
+.max-h-\[30\%\] {
+  max-height: 30%;
+}
+
 .min-h-\[200px\] {
   min-height: 200px;
 }
@@ -1446,6 +1470,18 @@ video {
 
 .w-svw {
   width: 100svw;
+}
+
+.w-\[91\%\] {
+  width: 91%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.min-w-\[100px\] {
+  min-width: 100px;
 }
 
 .max-w-full {
@@ -1924,6 +1960,18 @@ video {
   grid-template-columns: auto 3fr auto;
 }
 
+.grid-cols-\[\.71fr\2c 3fr\] {
+  grid-template-columns: .71fr 3fr;
+}
+
+.grid-cols-\[\.8fr\2c 1fr\2c 1fr\] {
+  grid-template-columns: .8fr 1fr 1fr;
+}
+
+.grid-cols-\[2fr\2c 1fr\] {
+  grid-template-columns: 2fr 1fr;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -2174,6 +2222,14 @@ video {
 
 .gap-\[8em\] {
   gap: 8em;
+}
+
+.gap-\[2em\] {
+  gap: 2em;
+}
+
+.gap-\[\.8em\] {
+  gap: .8em;
 }
 
 .gap-x-1 {
@@ -3243,6 +3299,10 @@ video {
   padding-top: 3em;
 }
 
+.pb-\[\.4em\] {
+  padding-bottom: .4em;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3606,6 +3666,10 @@ video {
   opacity: 1;
 }
 
+.opacity-\[1\] {
+  opacity: 1;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -3922,6 +3986,10 @@ video {
 
 .duration-\[1s\] {
   transition-duration: 1s;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
 }
 
 .ease-in {
@@ -5327,8 +5395,21 @@ footer .Socials{
   top: 0px;
 }
 
+.\[\&\.openSearch\]\:top-\[10vh\].openSearch {
+  top: 10vh;
+}
+
+.\[\&\.rotate\]\:rotate-\[180deg\].rotate {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .\[\&\.showIMG\]\:opacity-\[1\].showIMG {
   opacity: 1;
+}
+
+.\[\&\.show\]\:pointer-events-none.show {
+  pointer-events: none;
 }
 
 .\[\&\.show\]\:pointer-events-auto.show {
@@ -5343,6 +5424,10 @@ footer .Socials{
 
 .\[\&\.show\]\:opacity-\[1\].show {
   opacity: 1;
+}
+
+.\[\&\.show\]\:opacity-\[0\].show {
+  opacity: 0;
 }
 
 .\[\&\:not\(\:last-child\)\]\:border-l-\[1px\]:not(:last-child) {
